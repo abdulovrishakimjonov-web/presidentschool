@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    @@include('components/layout/head.html')
+</head>
+
+<body>
+    @@include('components/layout/header.html')
+    @@include('components/layout/menu.html')
+    @@include('components/layout/breadcrumb.html' )
+    <div class="layout">
+        <div class="container">
+            <section class="faq">
+                <button class="faq-item active">
+                    <p class="question">
+                        Vatandosh kim?
+                        <i class="i-dropdown"></i>
+                    </p>
+                    <p class="answer">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, delectus? Sed culpa vitae
+                        tempora quod, quos adipisci, dicta, doloribus maiores nemo modi quas! Temporibus, ut ex.
+                        Consequuntur culpa commodi beatae.
+                    </p>
+                </button>
+                <button class="faq-item">
+                    <p class="question">
+                        “Vatandoshlar” jamoat fondi qanday tashkilot ?
+                        <i class="toggle-btn i-dropdown"></i>
+                    </p>
+                    <p class="answer">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, impedit?
+                    </p>
+                </button>
+                <button class="faq-item">
+                    <p class="question">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil odio ipsum itaque, fuga qui
+                        mollitia maiores rerum ratione quod iusto.
+                        <i class="toggle-btn i-dropdown"></i>
+                    </p>
+                    <p class="answer">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, impedit?
+                    </p>
+                </button>
+
+            </section>
+            <script>
+                const faqItems = document.querySelectorAll(".faq .faq-item");
+
+                faqItems.forEach((item) => {
+                    const question = item.querySelector(".question");
+
+                    question.addEventListener("click", () => {
+                        faqItems.forEach((otherItem) => {
+                            if (otherItem !== item) {
+                                otherItem.classList.remove("active");
+                            }
+                        });
+
+                        item.classList.toggle("active");
+                    });
+                });
+            </script>
+        </div>
+    </div>
+    @@include('components/layout/footer.html')
+
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+:root {
+    --white: #FFFFFF;
+
+    --neutral50: #f9f1f3;
+    --neutral100: #E2E8F0;
+    --neutral200: #CBD5E1;
+    --neutral300: #94A3B8;
+    --neutral400: #64748B;
+    --neutral500: #475569;
+    --neutral600: #334155;
+    --neutral700: #1E293B;
+    --neutral800: #0F172A;
+    --neutral900: #020617;
+
+    --card950: #48A6A7;
+    --card900: #608BC1;
+    --card800: #155E95;
+    --card700: #2A407A;
+    --card600: #147E5C;
+    --card500: #0D2460;
+    --card400: #2A407A;
+    --card300: #0072C4;
+
+
+    --height-header: 156px;
+    --width-sidebar: 156px;
+    --width-container: 1520px;
+
+    @include devices(lg) {
+        --width-container: 1024px;
+    }
+}

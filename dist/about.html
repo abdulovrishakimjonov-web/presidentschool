@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Vatandoshlar Jamoat Fondi rasmiy veb-sayti">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="./images/logo.png">
+<link rel="stylesheet" href="./assets/libs/bootstrap/bootstrap.min.css">
+<link rel="stylesheet" href="./assets/libs/aos/main.min.css">
+<link rel="stylesheet" href="./assets/flatpickr/flatpickr.css">
+<link rel="stylesheet" href="./assets/libs/owl-carousel/owl.carousel.min.css">
+<link rel="stylesheet" href="./assets/libs/owl-carousel/owl.theme.default.min.css">
+<link rel="stylesheet" href="./assets/fonts/stylesheet.css">
+<link rel="stylesheet" href="./assets/font-awesome-4.7.0/style.css">
+<link rel="stylesheet" href="./css/main.min.css">
+<script src="./assets/libs/aos/main.min.js"></script>
+
+<title>Bien Consulting</title>
+</head>
+
+<body>
+    <header class="header" role="banner">
+  <div class="header-top">
+    <div class="container">
+        <div class="header-top-right">
+            <a href="#"><i class="i-phone"></i>+998 (90) 123 45 67</a>
+            <a href="#"><i class="i-mail"></i>+998 (90) 123 45 67</a>
+        </div>
+        <div class="header-top-left">
+            <div class="header-top-left-line">
+                <a href=""><i class="i-instagram"></i></a>
+                <a href=""><i class="i-youtube"></i></a>
+                <a href=""><i class="i-facebook"></i></a>
+                <a href=""><i class="i-telegram"></i></a>
+            </div>
+            <a class="header-top-left-link" href="#">
+                <img src="../../images/flag-uz.png" alt="">
+                <p>uzb</p>
+                <i class="i-dropdawun"></i>
+            </a>
+        </div>
+
+    </div>
+  </div>
+  <a class="header-logo" href="/"><img src="../../images/logo.svg" alt=""></a>
+  <div class="header-text">
+    <div class="container">
+        <div class="header-text-right">
+            <a href="../../about.html">Biz haqimizda</a>
+            <a href="../../leadership.html">Rahbariyat</a>
+            <a href="../../education.html">Ta’lim</a>
+            <a href="../../application.html">Qabul</a>
+        </div>
+        <div class="header-text-left">
+            <a href="#">Bizning faxrimiz</a>
+            <a href="../../gallery.html">Galereya</a>
+            <a href="../../news.html">Yangliklar</a>
+            <a href="../../contacts.html">Bog’lanish</a>
+        </div>
+    </div>
+  </div>
+</header>
+
+ <!-- <button class="header__menu-btn " hidden type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-expanded="false">
+            <span class="header__burger" aria-hidden="true"></span>
+        </button> -->
+    <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasMenu"
+    aria-labelledby="offcanvasMenuLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menyu</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <ul class="menu">
+            <li class="menu-item menu-item--dropdown">
+                <span class="menu-link" data-bs-toggle="collapse" data-bs-target="#submenu1" aria-expanded="false"
+                    aria-controls="submenu1">
+                    Agentlik
+                    <i class="i-angle-bot"></i>
+                </span>
+                <ul class="submenu collapse" id="submenu1">
+                    <li class="submenu-item">
+                        <a href="about.html" class="submenu-link">
+                            Biz haqimizda
+                        </a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="leadership.html" class="submenu-link">
+                            Bizning Jamoa
+                        </a>
+                    </li>
+                    <li class="submenu-item submenu-item--dropdown">
+                        <span class="submenu-link" data-bs-toggle="collapse" data-bs-target="#submenu2"
+                            aria-expanded="false" aria-controls="submenu2">
+                            Regional Offices
+                            <i class="i-angle-right"></i>
+                        </span>
+                        <ul class="submenu collapse" id="submenu2">
+                            <li class="submenu-item">
+                                <a href="tashkent-office.html" class="submenu-link">
+                                    Tashkent Office
+                                </a>
+                            </li>
+                            <li class="submenu-item">
+                                <a href="samarkand-office.html" class="submenu-link">
+                                    Samarkand Office
+                                </a>
+                            </li>
+                            <li class="submenu-item">
+                                <a href="bukhara-office.html" class="submenu-link">
+                                    Bukhara Office
+                                </a>
+                            </li>
+                            <li class="submenu-item submenu-item--dropdown">
+                                <span class="submenu-link" data-bs-toggle="collapse" data-bs-target="#submenu3"
+                                    aria-expanded="false" aria-controls="submenu3">
+                                    Regional Offices
+                                    <i class="i-angle-right"></i>
+                                </span>
+                                <ul class="submenu collapse" id="submenu3">
+                                    <li class="submenu-item">
+                                        <a href="tashkent-office.html" class="submenu-link">
+                                            Tashkent Office
+                                        </a>
+                                    </li>
+                                    <li class="submenu-item">
+                                        <a href="samarkand-office.html" class="submenu-link">
+                                            Samarkand Office
+                                        </a>
+                                    </li>
+                                    <li class="submenu-item">
+                                        <a href="bukhara-office.html" class="submenu-link">
+                                            Bukhara Office
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu-item">
+                <a href="empty.html" class="menu-link">
+                    Bo'sh sahifa
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="list.html" class="menu-link">
+                    Ma'lumotlar bazasi
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="table.html" class="menu-link">
+                    Jadval
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="stats.html" class="menu-link">
+                    Expertlar statistikasi
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="news.html" class="menu-link">
+                    Yangiliklar
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="faq.html" class="menu-link">
+                    Faq
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="contacts.html" class="menu-link">
+                    Kontaktlar
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+    <div class="breadcrumbs">
+    <div class="container">
+        <div class="breadcrumbs-wrapper">
+            <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__list--item">
+                    <a href="#" class="breadcrumbs__link">
+                     <i class="i-home"></i> <i class="i-arrow-right"></i>  Biz haqimizda
+                    </a>
+                </li>
+
+            </ul>
+            <h1 class="breadcrumbs__title">
+                Biz haqimizda
+            </h1>
+        </div>
+    </div>
+</div>
+    <div class="layout">
+        <div class="container">
+            <div class="about-page">
+                <div class="about-page-wrapper">
+                    <img src="./images/about-page-img.png" alt="">
+                    <div class="about-page-wrapper-main">
+                        <div class="about-page-wrapper-text">
+                        <h3>Toshkentdagi Prezident maktabi</h3>
+                        <p>O‘zbekiston Respublikasi tashabbusi bilan tashkil etilgan mazkur yetakchi ta’lim muassasasi
+                            iqtidorli va iqtidorli yoshlarni aniqlash, qo‘llab-quvvatlash va kamol toptirishga
+                            qaratilgan. Maktabda ta’lim zamonaviy pedagogik yondashuvlar, ilg‘or o‘quv dasturlari va
+                            yuqori malakali o‘qituvchilar mehnati asosida olib borilmoqda.</p>
+                    </div>
+                    <div class="about-page-wrapper-link">
+                       <img src="./images/about-page-img-2.png" alt="">
+                        <img src="./images/about-page-img-3.png" alt="">
+                    </div>
+                    </div>
+                    <div class="about-page-wrapper-logo">
+                        <img src="./images/about-page-img-4.png" alt="">
+                    </div>
+                </div>
+                <div class="about-page-content">
+                    <div class="about-page-content-card">
+                        <h4><i class="i-eye"></i>Our Vision</h4>
+                        <p>The vision of the Presidential Schools is to prepare the next generation of leaders to actively and positively contribute to the development of Uzbekistan by providing educational opportunities that encourage the nation's gifted and talented youth to realize their potential as creative, innovative participants in a dynamic global society</p>
+                    </div>
+                    <div class="about-page-content-card2">
+                        <h4><i class="i-gps"></i>Our Mission</h4>
+                        <p>The mission of the Presidential Schools is to enhance the educational experience for gifted students through a programme of academic excellence and holistic learning opportunities to develop the leadership potential of its graduates to contribute to the future of Uzbekistan.</p>
+                    </div>
+                </div>
+
+                <div class="about-page-box">
+                    <h3>Biz xalqaro tasdiqlangan va eko-maktabmiz!</h3>
+                    <div class="about-page-box-image">
+                        <img src="./images/about-page-img-5.png" alt="">
+                        <img src="./images/about-page-img-6.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="footer__container container">
+        <div class="footer-main">
+            <div class="footer-main-right">
+                <div class="footer-main-right-text">
+                    <a href="#">Biz haqimizda</a>
+                    <a href="#">Rahbariyat</a>
+                    <a href="#">Ta’lim</a>
+                    <a href="#">Qabul</a>
+                </div>
+                <div class="footer-main-right-line"></div>
+                <div class="footer-main-right-link">
+                    <a href="#"><i class="i-phone"></i>+998 (90) 123 45 67</a>
+                    <a href="#"><i class="i-mail"></i>info@tashkentpm.org</a>
+                </div>
+            </div>
+            <a class="footer-logo" href=""><img src="./images/footer-logo.png" alt=""></a>
+            <div class="footer-main-left">
+                <div class="footer-main-left-text">
+                    <a href="#">Biz haqimizda</a>
+                    <a href="#">Rahbariyat</a>
+                    <a href="#">Ta’lim</a>
+                    <a href="#">Qabul</a>
+                </div>
+                <div class="footer-main-left-line"></div>
+                <diz`v class="footer-main-left-link">
+                    <a href="#"><i class="i-location"></i>Durmon Y'oli 32, Тоshkent, Toshkent, Узбекистан</a>
+                    <div class="footer-main-left-link-icon">
+                        <i class="i-instagram"></i>
+                        <i class="i-youtube"></i>
+                        <i class="i-facebook"></i>
+                        <i class="i-telegram"></i>
+                    </div>
+                    </diz>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-line"></div>
+            <div class="footer-bottom-link">
+                <p>© 2026 Presidential School in Tashkent</p>
+                <p>Developed by: <img src="../../images/proend.svg" alt=""></p>
+            </div>
+        </div>
+
+    </div>
+</footer>
+<script src="./assets/libs/jquery.min.js"></script>
+<script src="./assets/libs/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="./assets/libs/owl-carousel/owl.carousel.min.js"></script>
+<script src="./assets/js/main.js"></script>
+
+<script>
+  $(document).ready(function () {
+    $(".gallery-section-carousel").owlCarousel({
+      loop: true,
+      margin: 16,
+      autoWidth: true,
+      nav: false,
+      dots: false,
+      autoplay: true,
+      autoplayTimeout: 3500,
+      autoplayHoverPause: true,
+      smartSpeed: 700
+    });
+  });
+</script>
+
+</body>
+
+</html>

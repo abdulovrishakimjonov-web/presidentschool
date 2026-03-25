@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Vatandoshlar Jamoat Fondi rasmiy veb-sayti">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="./images/logo.png">
+<link rel="stylesheet" href="./assets/libs/bootstrap/bootstrap.min.css">
+<link rel="stylesheet" href="./assets/libs/aos/main.min.css">
+<link rel="stylesheet" href="./assets/flatpickr/flatpickr.css">
+<link rel="stylesheet" href="./assets/libs/owl-carousel/owl.carousel.min.css">
+<link rel="stylesheet" href="./assets/libs/owl-carousel/owl.theme.default.min.css">
+<link rel="stylesheet" href="./assets/fonts/stylesheet.css">
+<link rel="stylesheet" href="./assets/font-awesome-4.7.0/style.css">
+<link rel="stylesheet" href="./css/main.min.css">
+<script src="./assets/libs/aos/main.min.js"></script>
+
+<title>Bien Consulting</title>
+</head>
+
+<body>
+    <header class="header" role="banner">
+  <div class="header-top">
+    <div class="container">
+        <div class="header-top-right">
+            <a href="#"><i class="i-phone"></i>+998 (90) 123 45 67</a>
+            <a href="#"><i class="i-mail"></i>+998 (90) 123 45 67</a>
+        </div>
+        <div class="header-top-left">
+            <div class="header-top-left-line">
+                <a href=""><i class="i-instagram"></i></a>
+                <a href=""><i class="i-youtube"></i></a>
+                <a href=""><i class="i-facebook"></i></a>
+                <a href=""><i class="i-telegram"></i></a>
+            </div>
+            <a class="header-top-left-link" href="#">
+                <img src="../../images/flag-uz.png" alt="">
+                <p>uzb</p>
+                <i class="i-dropdawun"></i>
+            </a>
+        </div>
+
+    </div>
+  </div>
+  <a class="header-logo" href="/"><img src="../../images/logo.svg" alt=""></a>
+  <div class="header-text">
+    <div class="container">
+        <div class="header-text-right">
+            <a href="../../about.html">Biz haqimizda</a>
+            <a href="../../leadership.html">Rahbariyat</a>
+            <a href="../../education.html">Ta’lim</a>
+            <a href="../../application.html">Qabul</a>
+        </div>
+        <div class="header-text-left">
+            <a href="#">Bizning faxrimiz</a>
+            <a href="../../gallery.html">Galereya</a>
+            <a href="../../news.html">Yangliklar</a>
+            <a href="../../contacts.html">Bog’lanish</a>
+        </div>
+    </div>
+  </div>
+</header>
+
+ <!-- <button class="header__menu-btn " hidden type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-expanded="false">
+            <span class="header__burger" aria-hidden="true"></span>
+        </button> -->
+    <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasMenu"
+    aria-labelledby="offcanvasMenuLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menyu</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <ul class="menu">
+            <li class="menu-item menu-item--dropdown">
+                <span class="menu-link" data-bs-toggle="collapse" data-bs-target="#submenu1" aria-expanded="false"
+                    aria-controls="submenu1">
+                    Agentlik
+                    <i class="i-angle-bot"></i>
+                </span>
+                <ul class="submenu collapse" id="submenu1">
+                    <li class="submenu-item">
+                        <a href="about.html" class="submenu-link">
+                            Biz haqimizda
+                        </a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="leadership.html" class="submenu-link">
+                            Bizning Jamoa
+                        </a>
+                    </li>
+                    <li class="submenu-item submenu-item--dropdown">
+                        <span class="submenu-link" data-bs-toggle="collapse" data-bs-target="#submenu2"
+                            aria-expanded="false" aria-controls="submenu2">
+                            Regional Offices
+                            <i class="i-angle-right"></i>
+                        </span>
+                        <ul class="submenu collapse" id="submenu2">
+                            <li class="submenu-item">
+                                <a href="tashkent-office.html" class="submenu-link">
+                                    Tashkent Office
+                                </a>
+                            </li>
+                            <li class="submenu-item">
+                                <a href="samarkand-office.html" class="submenu-link">
+                                    Samarkand Office
+                                </a>
+                            </li>
+                            <li class="submenu-item">
+                                <a href="bukhara-office.html" class="submenu-link">
+                                    Bukhara Office
+                                </a>
+                            </li>
+                            <li class="submenu-item submenu-item--dropdown">
+                                <span class="submenu-link" data-bs-toggle="collapse" data-bs-target="#submenu3"
+                                    aria-expanded="false" aria-controls="submenu3">
+                                    Regional Offices
+                                    <i class="i-angle-right"></i>
+                                </span>
+                                <ul class="submenu collapse" id="submenu3">
+                                    <li class="submenu-item">
+                                        <a href="tashkent-office.html" class="submenu-link">
+                                            Tashkent Office
+                                        </a>
+                                    </li>
+                                    <li class="submenu-item">
+                                        <a href="samarkand-office.html" class="submenu-link">
+                                            Samarkand Office
+                                        </a>
+                                    </li>
+                                    <li class="submenu-item">
+                                        <a href="bukhara-office.html" class="submenu-link">
+                                            Bukhara Office
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu-item">
+                <a href="empty.html" class="menu-link">
+                    Bo'sh sahifa
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="list.html" class="menu-link">
+                    Ma'lumotlar bazasi
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="table.html" class="menu-link">
+                    Jadval
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="stats.html" class="menu-link">
+                    Expertlar statistikasi
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="news.html" class="menu-link">
+                    Yangiliklar
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="faq.html" class="menu-link">
+                    Faq
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="contacts.html" class="menu-link">
+                    Kontaktlar
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+    <div class="breadcrumbs">
+    <div class="container">
+        <div class="breadcrumbs-wrapper">
+            <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__list--item">
+                    <a href="#" class="breadcrumbs__link">
+                     <i class="i-home"></i> <i class="i-arrow-right"></i>  Biz haqimizda
+                    </a>
+                </li>
+
+            </ul>
+            <h1 class="breadcrumbs__title">
+                Biz haqimizda
+            </h1>
+        </div>
+    </div>
+</div>
+    <div class="layout">
+        <div class="container">
+            <div class="news-view">
+               <div class="news-view-main">
+                <div class="news-view-main-link">
+                    <h3>Toshkent shahridagi Prezident maktabida Model BMT tadbiri bo‘lib o‘tdi</h3>
+                    <div class="news-view__top">
+
+                    <div class="news-view__title"></div>
+                    <label for="share" class="share-link" id="share-label" style="cursor:pointer;">
+                        <script>
+                            const patchYandexButton = () => {
+                                const moreBtn = document.querySelector('.ya-share2__badge.ya-share2__badge_more');
+                                const innerLink = document.querySelector('.ya-share2__link.ya-share2__link_more.ya-share2__link_more-button-type_short');
+
+                                if (!moreBtn || !innerLink) return false;
+
+                                innerLink.style.padding = '0';
+                                moreBtn.style.cssText = 'background: var(--white);color:var(--black1); border: 0; outline: 0;';
+                                moreBtn.innerHTML = `
+      <span class="body-2 border-2 border-black p-1 rounded-2 shadow-lg  d-flex gap-2 align-items-center">
+        <i class="i-share fs-4"></i><span class="d-flex align-items-center share text-[#1E293B]">Ulashish</span>
+      </span>
+    `;
+
+                                return true;
+                            };
+
+                            const startPatch = () => {
+                                if (patchYandexButton()) return;
+
+                                const observer = new MutationObserver(() => {
+                                    if (patchYandexButton()) observer.disconnect();
+                                });
+
+                                observer.observe(document.body, { childList: true, subtree: true });
+                                setTimeout(() => observer.disconnect(), 10000);
+                            };
+
+                            const script = document.createElement('script');
+                            script.src = 'https://yastatic.net/share2/share.js';
+                            script.onload = startPatch;
+                            document.head.appendChild(script);
+                        </script>
+
+
+                        <div id="share" class="ya-share2 share-link" data-curtain data-limit="0" data-more-button-type="short" data-services="telegram,twitter,whatsapp,linkedin">
+                        </div>
+                    </label>
+
+                </div>
+                </div>
+                <img src="./images/news-view-img.png" alt="">
+                <div class="news-view-main-text">
+                    <ul>
+                        <li>Toshkent shahridagi Prezident maktabi o‘quvchilari tashabbusi bilan tashkil etilgan Model BMT (Model United Nations) tadbirida Ixtisoslashtirilgan ta’lim muassasalari agentligi tizimidagi maktablar hamda umumta’lim maktablarining o‘quvchilari faol ishtirok etdi.</li>
+                        <li>Tadbir doirasida ishtirokchilar Birlashgan Millatlar Tashkilotining turli qo‘mitalari faoliyati asosida bugungi kunda jahon hamjamiyatini tashvishga solayotgan dolzarb global masalalarni muhokama qildilar. Jumladan, global ta’minot zanjirlaridagi uzilishlar natijasida yuzaga kelayotgan oziq-ovqat xavfsizligi muammolari, qurolli mojarolar sharoitida tinch aholini himoya qilish, ayollarning siyosiy jarayonlardagi ishtirokini kengaytirish, odam savdosiga qarshi kurash hamda tinchlikparvarlik faoliyati masalalari yuzasidan muhim fikr va takliflar ilgari surildi.</li>
+                        <li>Shuningdek, tadbirda IELTS imtihonidan 9 ballik natijani qayd etgan ilk o‘zbekistonlik ayol — Ma’mura Yo‘ldosheva ham ishtirok etdi. U o‘quvchilarga xalqaro imtihonlarga tayyorgarlik ko‘rish, til o‘rganishning samarali usullari hamda global miqyosda fikrlash ko‘nikmalarini rivojlantirish bo‘yicha amaliy tavsiyalar berdi.</li>
+                    </ul>
+                    <div class="news-view-main-text-line"></div>
+                    <div class="news-view-main-text-bottom">
+                        <div class="news-view-main-text-bottom-right">
+                            <p>Bizni ijtimoiy tarmoqlardan kuzating:</p>
+                            <div class="news-view-main-text-bottom-right-icon">
+                                <i class="i-instagram"></i>
+                                <i class="i-youtube"></i>
+                                <i class="i-facebook"></i>
+                                <i class="i-telegram"></i>
+                            </div>
+                        </div>
+                        <div class="news-view-main-text-bottom-left">
+                            <p><i class="i-calendar-2"></i>27/01/2026</p>
+                            <p><i class="i-eye"></i>123</p>
+                        </div>
+                    </div>
+                </div>
+               </div>
+
+                
+                <div class="carousel--wrapper">
+                    <div class="news-img-carousel">
+                        <div class="carousel-track"></div>
+                    </div>
+                </div>
+                <div class="carousel-lines"></div>
+
+                <script>
+                    document.addEventListener('DOMContentLoaded', () => {
+                        const track = document.querySelector('.carousel-track');
+                        const images = [
+                        
+                        ];
+
+                        images.forEach(url => {
+                            const slide = document.createElement('div');
+                            slide.className = 'carousel-slide';
+
+                            const bg = document.createElement('div');
+                            bg.className = 'background-effect';
+                            bg.style.backgroundImage = `url('${url}')`;
+
+                            const img = document.createElement('img');
+                            img.className = 'contained-image';
+                            img.src = url;
+                            img.width = 1000;
+
+                            slide.append(bg, img);
+                            track.appendChild(slide);
+                        });
+
+                        initSlider();
+                    });
+
+                    function initSlider() {
+                        const track = document.querySelector('.carousel-track');
+                        const slides = track.children;
+                        const linesContainer = document.querySelector('.carousel-lines');
+                        const wrapper = document.querySelector('.carousel--wrapper');
+                        let index = 0, startX = 0, currentTranslate = 0, prevTranslate = 0, dragging = false;
+                        let isHovered = false, isInteracting = false, swipeTimeout;
+
+
+                        for (let i = 0; i < slides.length; i++) {
+                            const line = document.createElement('div');
+                            line.addEventListener('click', () => {
+                                index = i;
+                                setPositionByIndex();
+                                resetAutoplay();
+                            });
+                            linesContainer.appendChild(line);
+                        }
+
+                        const lines = linesContainer.children;
+                        lines[index].classList.add('active');
+
+                        track.addEventListener('mousedown', startDrag);
+                        track.addEventListener('touchstart', startDrag, { passive: true });
+                        track.addEventListener('mousemove', drag);
+                        track.addEventListener('touchmove', drag, { passive: true });
+                        track.addEventListener('mouseup', endDrag);
+                        track.addEventListener('mouseleave', endDrag);
+                        track.addEventListener('touchend', endDrag);
+
+                        wrapper.addEventListener('mouseenter', () => isHovered = true);
+                        wrapper.addEventListener('mouseleave', () => isHovered = false);
+                        wrapper.addEventListener('mousedown', () => isInteracting = true);
+                        wrapper.addEventListener('mouseup', () => isInteracting = false);
+                        wrapper.addEventListener('touchstart', () => isInteracting = true);
+                        wrapper.addEventListener('touchend', () => isInteracting = false);
+
+                        function startDrag(e) {
+                            dragging = true;
+                            startX = e.type.startsWith('touch') ? e.touches[0].clientX : e.clientX;
+                            track.style.transition = 'none';
+                            e.preventDefault();
+                        }
+
+                        function drag(e) {
+                            if (!dragging) return;
+                            const currentX = e.type.startsWith('touch') ? e.touches[0].clientX : e.clientX;
+                            const delta = currentX - startX;
+                            currentTranslate = prevTranslate + delta;
+                            track.style.transform = `translateX(${currentTranslate}px)`;
+                            e.preventDefault();
+                        }
+
+                        function endDrag(e) {
+                            if (!dragging) return;
+                            dragging = false;
+                            const endX = e.type.startsWith('touch') ? (e.changedTouches[0]?.clientX ?? startX) : e.clientX;
+                            const moved = endX - startX;
+                            track.style.transition = 'transform 0.3s ease';
+
+                            const threshold = 50;
+                            if (moved < -threshold && index < slides.length - 1) index++;
+                            else if (moved > threshold && index > 0) index--;
+
+                            setPositionByIndex();
+                            resetAutoplay();
+                        }
+
+                        function setPositionByIndex() {
+                            const width = wrapper.clientWidth;
+                            currentTranslate = prevTranslate = -index * width;
+                            track.style.transform = `translateX(${currentTranslate}px)`;
+                            [...lines].forEach(line => line.classList.remove('active'));
+                            lines[index].classList.add('active');
+                        }
+
+                        window.addEventListener('resize', () => {
+                            updateWidths();
+                            setPositionByIndex();
+                        });
+
+                        let autoplay = setInterval(() => {
+                            if (!isHovered && !isInteracting) {
+                                index = (index + 1) % slides.length;
+                                setPositionByIndex();
+                            }
+                        }, 2000);
+
+                        function resetAutoplay() {
+                            clearInterval(autoplay);
+                            clearTimeout(swipeTimeout);
+                            swipeTimeout = setTimeout(() => {
+                                autoplay = setInterval(() => {
+                                    if (!isHovered && !isInteracting) {
+                                        index = (index + 1) % slides.length;
+                                        setPositionByIndex();
+                                    }
+                                }, 2000);
+                            }, 5000);
+                        }
+                    }
+
+                </script>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="footer__container container">
+        <div class="footer-main">
+            <div class="footer-main-right">
+                <div class="footer-main-right-text">
+                    <a href="#">Biz haqimizda</a>
+                    <a href="#">Rahbariyat</a>
+                    <a href="#">Ta’lim</a>
+                    <a href="#">Qabul</a>
+                </div>
+                <div class="footer-main-right-line"></div>
+                <div class="footer-main-right-link">
+                    <a href="#"><i class="i-phone"></i>+998 (90) 123 45 67</a>
+                    <a href="#"><i class="i-mail"></i>info@tashkentpm.org</a>
+                </div>
+            </div>
+            <a class="footer-logo" href=""><img src="./images/footer-logo.png" alt=""></a>
+            <div class="footer-main-left">
+                <div class="footer-main-left-text">
+                    <a href="#">Biz haqimizda</a>
+                    <a href="#">Rahbariyat</a>
+                    <a href="#">Ta’lim</a>
+                    <a href="#">Qabul</a>
+                </div>
+                <div class="footer-main-left-line"></div>
+                <diz`v class="footer-main-left-link">
+                    <a href="#"><i class="i-location"></i>Durmon Y'oli 32, Тоshkent, Toshkent, Узбекистан</a>
+                    <div class="footer-main-left-link-icon">
+                        <i class="i-instagram"></i>
+                        <i class="i-youtube"></i>
+                        <i class="i-facebook"></i>
+                        <i class="i-telegram"></i>
+                    </div>
+                    </diz>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-line"></div>
+            <div class="footer-bottom-link">
+                <p>© 2026 Presidential School in Tashkent</p>
+                <p>Developed by: <img src="../../images/proend.svg" alt=""></p>
+            </div>
+        </div>
+
+    </div>
+</footer>
+<script src="./assets/libs/jquery.min.js"></script>
+<script src="./assets/libs/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="./assets/libs/owl-carousel/owl.carousel.min.js"></script>
+<script src="./assets/js/main.js"></script>
+
+<script>
+  $(document).ready(function () {
+    $(".gallery-section-carousel").owlCarousel({
+      loop: true,
+      margin: 16,
+      autoWidth: true,
+      nav: false,
+      dots: false,
+      autoplay: true,
+      autoplayTimeout: 3500,
+      autoplayHoverPause: true,
+      smartSpeed: 700
+    });
+  });
+</script>
+
+</body>
+
+</html>

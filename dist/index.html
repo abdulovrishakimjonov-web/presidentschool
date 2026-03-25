@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Vatandoshlar Jamoat Fondi rasmiy veb-sayti">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="./images/logo.png">
+<link rel="stylesheet" href="./assets/libs/bootstrap/bootstrap.min.css">
+<link rel="stylesheet" href="./assets/libs/aos/main.min.css">
+<link rel="stylesheet" href="./assets/flatpickr/flatpickr.css">
+<link rel="stylesheet" href="./assets/libs/owl-carousel/owl.carousel.min.css">
+<link rel="stylesheet" href="./assets/libs/owl-carousel/owl.theme.default.min.css">
+<link rel="stylesheet" href="./assets/fonts/stylesheet.css">
+<link rel="stylesheet" href="./assets/font-awesome-4.7.0/style.css">
+<link rel="stylesheet" href="./css/main.min.css">
+<script src="./assets/libs/aos/main.min.js"></script>
+
+<title>Bien Consulting</title>
+</head>
+
+<body class="index">
+    <header class="header" role="banner">
+  <div class="header-top">
+    <div class="container">
+        <div class="header-top-right">
+            <a href="#"><i class="i-phone"></i>+998 (90) 123 45 67</a>
+            <a href="#"><i class="i-mail"></i>+998 (90) 123 45 67</a>
+        </div>
+        <div class="header-top-left">
+            <div class="header-top-left-line">
+                <a href=""><i class="i-instagram"></i></a>
+                <a href=""><i class="i-youtube"></i></a>
+                <a href=""><i class="i-facebook"></i></a>
+                <a href=""><i class="i-telegram"></i></a>
+            </div>
+            <a class="header-top-left-link" href="#">
+                <img src="../../images/flag-uz.png" alt="">
+                <p>uzb</p>
+                <i class="i-dropdawun"></i>
+            </a>
+        </div>
+
+    </div>
+  </div>
+  <a class="header-logo" href="/"><img src="../../images/logo.svg" alt=""></a>
+  <div class="header-text">
+    <div class="container">
+        <div class="header-text-right">
+            <a href="../../about.html">Biz haqimizda</a>
+            <a href="../../leadership.html">Rahbariyat</a>
+            <a href="../../education.html">Ta’lim</a>
+            <a href="../../application.html">Qabul</a>
+        </div>
+        <div class="header-text-left">
+            <a href="#">Bizning faxrimiz</a>
+            <a href="../../gallery.html">Galereya</a>
+            <a href="../../news.html">Yangliklar</a>
+            <a href="../../contacts.html">Bog’lanish</a>
+        </div>
+    </div>
+  </div>
+</header>
+
+ <!-- <button class="header__menu-btn " hidden type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-expanded="false">
+            <span class="header__burger" aria-hidden="true"></span>
+        </button> -->
+    <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasMenu"
+    aria-labelledby="offcanvasMenuLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menyu</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <ul class="menu">
+            <li class="menu-item menu-item--dropdown">
+                <span class="menu-link" data-bs-toggle="collapse" data-bs-target="#submenu1" aria-expanded="false"
+                    aria-controls="submenu1">
+                    Agentlik
+                    <i class="i-angle-bot"></i>
+                </span>
+                <ul class="submenu collapse" id="submenu1">
+                    <li class="submenu-item">
+                        <a href="about.html" class="submenu-link">
+                            Biz haqimizda
+                        </a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="leadership.html" class="submenu-link">
+                            Bizning Jamoa
+                        </a>
+                    </li>
+                    <li class="submenu-item submenu-item--dropdown">
+                        <span class="submenu-link" data-bs-toggle="collapse" data-bs-target="#submenu2"
+                            aria-expanded="false" aria-controls="submenu2">
+                            Regional Offices
+                            <i class="i-angle-right"></i>
+                        </span>
+                        <ul class="submenu collapse" id="submenu2">
+                            <li class="submenu-item">
+                                <a href="tashkent-office.html" class="submenu-link">
+                                    Tashkent Office
+                                </a>
+                            </li>
+                            <li class="submenu-item">
+                                <a href="samarkand-office.html" class="submenu-link">
+                                    Samarkand Office
+                                </a>
+                            </li>
+                            <li class="submenu-item">
+                                <a href="bukhara-office.html" class="submenu-link">
+                                    Bukhara Office
+                                </a>
+                            </li>
+                            <li class="submenu-item submenu-item--dropdown">
+                                <span class="submenu-link" data-bs-toggle="collapse" data-bs-target="#submenu3"
+                                    aria-expanded="false" aria-controls="submenu3">
+                                    Regional Offices
+                                    <i class="i-angle-right"></i>
+                                </span>
+                                <ul class="submenu collapse" id="submenu3">
+                                    <li class="submenu-item">
+                                        <a href="tashkent-office.html" class="submenu-link">
+                                            Tashkent Office
+                                        </a>
+                                    </li>
+                                    <li class="submenu-item">
+                                        <a href="samarkand-office.html" class="submenu-link">
+                                            Samarkand Office
+                                        </a>
+                                    </li>
+                                    <li class="submenu-item">
+                                        <a href="bukhara-office.html" class="submenu-link">
+                                            Bukhara Office
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu-item">
+                <a href="empty.html" class="menu-link">
+                    Bo'sh sahifa
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="list.html" class="menu-link">
+                    Ma'lumotlar bazasi
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="table.html" class="menu-link">
+                    Jadval
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="stats.html" class="menu-link">
+                    Expertlar statistikasi
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="news.html" class="menu-link">
+                    Yangiliklar
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="faq.html" class="menu-link">
+                    Faq
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="contacts.html" class="menu-link">
+                    Kontaktlar
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+    <section class="hero">
+  <div class="hero__bg">
+    <video class="hero__bg-video" autoplay muted loop playsinline preload="auto">
+      <source src="../../images/hero-video.mp4" type="video/mp4" />
+      Brauzeringiz video formatini qo‘llab-quvvatlamaydi.
+    </video>
+  </div>
+
+  <div class="hero__container">
+    <div class="hero__placeholder"></div>
+
+    <div class="hero__content">
+      <h1>
+        Kelajak yetakchilarini <br />
+        bugundan tayyorlaymiz
+      </h1>
+
+      <p>
+        President maktabi — iqtidorli yoshlar uchun zamonaviy bilim, xalqaro
+        standartlar va kuchli tarbiya uyg‘unlashgan ta’lim maskani. Biz global
+        fikrlaydigan, mas’uliyatli va raqobatbardosh avlodni yetishtiramiz.
+      </p>
+
+      <div class="hero__actions">
+        <a href="#" class="hero__actions-btn">
+          Hozirqo ariza berish
+        </a>
+
+        <a href="#" class="hero__actions-btn hero__actions-btn--secondary">
+          Batafsil ma'lumot
+          <i class="i-right"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero__stats">
+      <div class="hero__stats-item">
+        <div class="hero__stats-icon">
+          <i class="i-global-edit"></i>
+        </div>
+        <h3>Global nuqtayi nazar</h3>
+        <p>"Cambridge" dasturi asosidagi STEM ta’limi</p>
+      </div>
+
+      <div class="hero__stats-item">
+        <div class="hero__stats-icon">
+          <i class="i-book-edit"></i>
+        </div>
+        <h3>Zamonaviy o‘quv dasturi</h3>
+        <p>Global ta’lim va xalqaro akademik standartlar</p>
+      </div>
+
+      <div class="hero__stats-item">
+        <div class="hero__stats-icon">
+          <i class="i-award"></i>
+        </div>
+        <h3>Malakali o‘qituvchilar</h3>
+        <p>Mahalliy va xalqaro yuqori malakali o‘qituvchilar</p>
+      </div>
+    </div>
+  </div>
+</section>
+    <section class="about">
+    <div class="about-section">
+        <div class="container">
+            <div class="about-section-text">
+                <a href="#"><i class="i-cake"></i>Biz haqimizda</a>
+                <h3>Toshkentdagi Prezident maktabi</h3>
+                <p>O‘zbekiston Respublikasi tashabbusi bilan tashkil etilgan mazkur yetakchi ta’lim muassasasi iqtidorli
+                    va iqtidorli yoshlarni aniqlash, qo‘llab-quvvatlash va kamol toptirishga qaratilgan. Maktabda ta’lim
+                    zamonaviy pedagogik yondashuvlar, ilg‘or o‘quv dasturlari va yuqori malakali o‘qituvchilar mehnati
+                    asosida olib borilmoqda.</p>
+                <p>Milliy qadriyatlar va jahon akademik standartlarini o‘zida mujassam etgan ta’lim jarayonida
+                    o‘quvchilarga xalqaro talablar darajasida chuqur va sifatli bilimlar berilmoqda. Muassasa
+                    bitiruvchilari mustaqil fikrlaydigan, mas’uliyatli, raqobatbardosh, yetakchilik salohiyatiga ega,
+                    jamiyat va davlat rivojiga munosib hissa qo‘shishga tayyor shaxs sifatida shakllanadi.</p>
+                <button>Batafsil ma'lumot <i class="i-right"></i></button>
+            </div>
+            <div class="about-section-right">
+                <div class="about-section-right-card">
+                    <div class="about-section-right-card-item about-section-right-card-item--big">
+                        <img src="../../images/about-img-1.png" alt="Maktab binosi" />
+                    </div>
+
+                    <div class="about-section-right-card-item about-section-right-card-item--banner">
+                        <img src="../../images/about-img-2.png" alt="Presidential School in Tashkent" />
+                    </div>
+                </div>
+
+                <div class="about-section-right-card">
+                    <div class="about-section-right-card-item about-section-right-card-item--logo">
+                        <img src="../../images/about-img-3.png" alt="Logo" />
+                    </div>
+
+                    <div class="about-section-right-card-item about-section-right-card-item--small">
+                        <img src="../../images/about-img-4.png" alt="Maktab ko‘rinishi" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <section class="news">
+    <div class="news-section">
+        <div class="container">
+            <div class="news-section-link">
+                <div class="news-section-link-text">
+                    <a href="#"><i class="i-directbox-notif"></i>Yangliklar</a>
+                    <h3>Maktab yangliklari</h3>
+                </div>
+                <a href="#">Barchasi <i class="i-right"></i></a>
+            </div>
+            <div class="news-section-main">
+                <div class="news-section-main-wrapper">
+                    <div class="news-section-main-wrapper-card">
+                        <img src="./images/news-img-1.png" alt="">
+                        <div class="news-section-main-wrapper-card-start">
+                            <h4>Prezident maktabida yangi STEM laboratoriyasi rasman ochildi</h4>
+                            <p>Prezident maktabida o‘quvchilar o‘rtasida amaliy bilim olish va innovatsiyalarni
+                                rivojlantirish maqsadida zamonaviy texnologiyalar bilan..</p>
+                            <div class="news-section-main-wrapper-card-start-top"></div>
+                            <div class="news-section-main-wrapper-card-start-link">
+                                <div class="news-section-main-wrapper-card-start-link-text">
+                                    <a href="#"><i class="i-calendar-2"></i>27/01/2026</a>
+                                    <a href="#"><i class="i-eye"></i>123</a>
+                                </div>
+                                <a href="#">Ko’rish <i class="i-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-section-main-wrapper-card">
+                        <img src="./images/news-img-2.png" alt="">
+                        <div class="news-section-main-wrapper-card-start">
+                            <h4>Prezident maktabida yangi STEM laboratoriyasi rasman ochildi</h4>
+                            <p>Prezident maktabida o‘quvchilar o‘rtasida amaliy bilim olish va innovatsiyalarni
+                                rivojlantirish maqsadida zamonaviy texnologiyalar bilan..</p>
+                            <div class="news-section-main-wrapper-card-start-top"></div>
+                            <div class="news-section-main-wrapper-card-start-link">
+                                <div class="news-section-main-wrapper-card-start-link-text">
+                                    <a href="#"><i class="i-calendar-2"></i>27/01/2026</a>
+                                    <a href="#"><i class="i-eye"></i>123</a>
+                                </div>
+                                <a href="#">Ko’rish <i class="i-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <section class="education">
+    <div class="education-section">
+        <div class="container">
+
+            <div class="education-section-main">
+                <div class="education-section-main-inner">
+                    <div class="education-section-text">
+                        <p><i class="i-teacher"></i>Ta’lim</p>
+                        <div class="education-section-text-link">
+                            <h3>Ta'lim dasturi haqida</h3>
+                            <a href="#">Barchasi <i class="i-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="education-section-content">
+                        <div class="education-section-content-card education-section-content-image">
+                            <i class="i-teacher"></i>
+                            <h3>5–11-sinflar</h3>
+                            <p>milliy va xalqaro fanlarni o‘zlashtirish</p>
+                        </div>
+
+                        <div class="education-section-content-card">
+                            <i class="i-global"></i>
+                            <h3>Tillar</h3>
+                            <p>Ingliz tili (EFL), o‘zbek tili, rus tili;</p>
+                        </div>
+
+                        <div class="education-section-content-card">
+                            <i class="i-book"></i>
+                            <h3>Gumanitar fanlar</h3>
+                            <p>O‘zbekiston tarixi, jahon tarixi, zamonaviy yondashuv.</p>
+                        </div>
+
+                        <div class="education-section-content-card">
+                            <i class="i-award"></i>
+                            <h3>AS va A darajalar</h3>
+                            <p>matematika va tanlov fanlari (kimyo, fizika, biologiya va informatika)</p>
+                        </div>
+
+                        <div class="education-section-content-card">
+                            <i class="i-book-edit"></i>
+                            <h3>IGCSE fanlari</h3>
+                            <p>matematika, fizika, kimyo, biologiya va informatika</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="education-section-main-inner">
+                    <div class="education-section-text">
+                        <b class="education-section-text-icon"><i class="i-document-text"></i>Qabul</b>
+                        <div class="education-section-text-link">
+                            <h3>Qabul jarayoni</h3>
+                            <a href="#">Barchasi <i class="i-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="education-section-wrapper">
+                        <div class="education-section-wrapper-card">
+                            <i class="i-search-status"></i>
+                            <div class="education-section-wrapper-card-text">
+                                <h5>1-qadam: Tanishib chiqish</h5>
+                                <P>Maktab va dasturlar haqida ma’lumot oling</P>
+                            </div>
+                        </div>
+                        <div class="education-section-wrapper-link"><i class="i-dropdawun"></i></div>
+                        <div class="education-section-wrapper-card">
+                            <i class="i-search-status"></i>
+                            <div class="education-section-wrapper-card-text">
+                                <h5>1-qadam: Tanishib chiqish</h5>
+                                <P>Maktab va dasturlar haqida ma’lumot oling</P>
+                            </div>
+                        </div>
+                        <div class="education-section-wrapper-link"><i class="i-dropdawun"></i></div>
+                        <div class="education-section-wrapper-card">
+                            <i class="i-search-status"></i>
+                            <div class="education-section-wrapper-card-text">
+                                <h5>1-qadam: Tanishib chiqish</h5>
+                                <P>Maktab va dasturlar haqida ma’lumot oling</P>
+                            </div>
+                        </div>
+                        <div class="education-section-wrapper-link"><i class="i-dropdawun"></i></div>
+                        <div class="education-section-wrapper-card">
+                            <i class="i-search-status"></i>
+                            <div class="education-section-wrapper-card-text">
+                                <h5>1-qadam: Tanishib chiqish</h5>
+                                <P>Maktab va dasturlar haqida ma’lumot oling</P>
+                            </div>
+                        </div>
+                        <div class="education-section-wrapper-btn"><button>Hoziroq ariza berish</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <section class="gallery-section">
+  <div class="container">
+    <div class="gallery-section-link">
+      <p><i class="i-gallery"></i>Galereya</p>
+      <div class="gallery-section-link-text">
+        <h3>Bizning jonli maktab hayotimizni o'rganing</h3>
+        <a href="#">Barchasi <i class="i-right"></i></a>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="owl-carousel gallery-section-carousel">
+    <div class="gallery-section-carousel-card">
+      <img src="../../images/gallery-img-4.png" alt="">
+      <img src="../../images/gallery-img-5.png" alt="">
+    </div>
+    <div class="gallery-section-carousel-card"><img src="../../images/gallery-img-3.png" alt=""></div>
+    <div class="gallery-section-carousel-card">
+      <img src="../../images/gallery-img-4.png" alt="">
+      <img src="../../images/gallery-img-5.png" alt="">
+    </div>
+   <div class="gallery-section-carousel-card"><img src="../../images/gallery-img-3.png" alt=""></div>
+   <div class="gallery-section-carousel-card">
+      <img src="../../images/gallery-img-4.png" alt="">
+      <img src="../../images/gallery-img-5.png" alt="">
+    </div>
+    <div class="gallery-section-carousel-card"><img src="../../images/gallery-img-3.png" alt=""></div>
+  </div>
+  <!-- <div class="owl-carousel gallery-carousel">
+    <div class="gallery-card gallery-card-stack">
+      <div class="gallery-card__image gallery-card__image--small">
+        <img src="../../images/gallery-img-1.png" alt="Gallery image 1">
+      </div>
+      <div class="gallery-card__image gallery-card__image--small">
+        <img src="../../images/gallery-img-2.png" alt="Gallery image 2">
+      </div>
+    </div>
+
+    <div class="gallery-card gallery-card--large">
+      <div class="gallery-card__image gallery-card__image--large">
+        <img src="../../images/gallery-img-3.png" alt="Gallery image 3">
+      </div>
+    </div>
+
+    <div class="gallery-card gallery-card-stack">
+      <div class="gallery-card__image gallery-card__image--small">
+        <img src="../../images/gallery-img-4.png" alt="Gallery image 4">
+      </div>
+      <div class="gallery-card__image gallery-card__image--small">
+        <img src="../../images/gallery-img-5.png" alt="Gallery image 5">
+      </div>
+    </div>
+
+    <div class="gallery-card gallery-card--large">
+      <div class="gallery-card__image gallery-card__image--large">
+        <img src="../../images/gallery-img-6.png" alt="Gallery image 6">
+      </div>
+    </div>
+
+    <div class="gallery-card gallery-card-stack">
+      <div class="gallery-card__image gallery-card__image--small">
+        <img src="../../images/gallery-img-7.png" alt="Gallery image 7">
+      </div>
+      <div class="gallery-card__image gallery-card__image--small">
+        <img src="../../images/gallery-img-8.png" alt="Gallery image 8">
+      </div>
+    </div>
+
+    <div class="gallery-card gallery-card--large">
+      <div class="gallery-card__image gallery-card__image--large">
+        <img src="../../images/gallery-img-9.png" alt="Gallery image 9">
+      </div>
+    </div>
+
+    <div class="gallery-card gallery-card-stack">
+      <div class="gallery-card__image gallery-card__image--small">
+        <img src="../../images/gallery-img-4.png" alt="Gallery image 4">
+      </div>
+      <div class="gallery-card__image gallery-card__image--small">
+        <img src="../../images/gallery-img-5.png" alt="Gallery image 5">
+      </div>
+    </div>
+
+    <div class="gallery-card gallery-card--large">
+      <div class="gallery-card__image gallery-card__image--large">
+        <img src="../../images/gallery-img-6.png" alt="Gallery image 6">
+      </div>
+    </div>
+  </div> -->
+</section>
+    <footer class="footer">
+    <div class="footer__container container">
+        <div class="footer-main">
+            <div class="footer-main-right">
+                <div class="footer-main-right-text">
+                    <a href="#">Biz haqimizda</a>
+                    <a href="#">Rahbariyat</a>
+                    <a href="#">Ta’lim</a>
+                    <a href="#">Qabul</a>
+                </div>
+                <div class="footer-main-right-line"></div>
+                <div class="footer-main-right-link">
+                    <a href="#"><i class="i-phone"></i>+998 (90) 123 45 67</a>
+                    <a href="#"><i class="i-mail"></i>info@tashkentpm.org</a>
+                </div>
+            </div>
+            <a class="footer-logo" href=""><img src="./images/footer-logo.png" alt=""></a>
+            <div class="footer-main-left">
+                <div class="footer-main-left-text">
+                    <a href="#">Biz haqimizda</a>
+                    <a href="#">Rahbariyat</a>
+                    <a href="#">Ta’lim</a>
+                    <a href="#">Qabul</a>
+                </div>
+                <div class="footer-main-left-line"></div>
+                <diz`v class="footer-main-left-link">
+                    <a href="#"><i class="i-location"></i>Durmon Y'oli 32, Тоshkent, Toshkent, Узбекистан</a>
+                    <div class="footer-main-left-link-icon">
+                        <i class="i-instagram"></i>
+                        <i class="i-youtube"></i>
+                        <i class="i-facebook"></i>
+                        <i class="i-telegram"></i>
+                    </div>
+                    </diz>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-line"></div>
+            <div class="footer-bottom-link">
+                <p>© 2026 Presidential School in Tashkent</p>
+                <p>Developed by: <img src="../../images/proend.svg" alt=""></p>
+            </div>
+        </div>
+
+    </div>
+</footer>
+<script src="./assets/libs/jquery.min.js"></script>
+<script src="./assets/libs/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="./assets/libs/owl-carousel/owl.carousel.min.js"></script>
+<script src="./assets/js/main.js"></script>
+
+<script>
+  $(document).ready(function () {
+    $(".gallery-section-carousel").owlCarousel({
+      loop: true,
+      margin: 16,
+      autoWidth: true,
+      nav: false,
+      dots: false,
+      autoplay: true,
+      autoplayTimeout: 3500,
+      autoplayHoverPause: true,
+      smartSpeed: 700
+    });
+  });
+</script>
+    <script>
+        document.querySelector('.header').classList.add('light');
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const header = document.querySelector('.header');
+            if (!header) return;
+
+            function onScroll() {
+                header.classList.toggle('light', window.scrollY <= 30);
+            }
+
+            onScroll();
+            window.addEventListener('scroll', onScroll);
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,169 @@
+.leadership {
+  &-view {
+    padding: 40px 0px 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+   &-text {
+    padding: 24px 24px 45px 24px;
+    background-color: var(--white);
+    border-radius: 12px;
+    h3 {
+        @include font(24px, 500);
+        color: #0F172A;
+        line-height: 34px;
+        margin-bottom: 16px;
+    }
+    &-link {
+        width: 100%;
+        height: 0.5px;
+        background-color: #E2E8F0;
+        margin-bottom: 16px;
+    }
+    p {
+        @include font(18px, 400);
+        line-height: 28px;
+        color: #1E293B;
+        margin-bottom: 16px;
+    }
+   }
+   &-cards {
+    display: flex;
+    flex-direction: column;
+    img {
+        height: 280px;
+    }
+    &-card {
+        padding: 22px 16px;
+        background-color: var(--white);
+        border-radius: 12px;
+        background-image: url("../../images/lidership-img-2.png");
+        background-repeat: no-repeat;
+        background-position: right top 50%;
+        p {
+            @include font(18px, 400);
+            line-height: 28px;
+            color: #2A407A;
+            margin-bottom: 4px;
+        }
+        h4 {
+            @include font(24px, 500);
+            line-height: 32px;
+            color: #0F172A;
+            margin-bottom: 16px;
+        }
+        button {
+            padding: 6px;
+            border-radius: 6px;
+            border: 1px solid #E2E8F0;
+            background-color: var(--white);
+            @include font(16px, 400);
+            line-height: 24px;
+            color: #2A407A;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+    }
+   }
+  }
+
+  &-page {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+ 
+    &-color2 {
+      background: var(--white);
+    }
+    &-cards {
+      display: flex;
+      align-items: center;
+
+      border-radius: 12px;
+      &-horizantal {
+        width: 10px;
+        height: 100%;
+        background-color: #0d2460;
+      }
+      
+      &-card {
+        padding: 16px;
+        background-image: url("../../images/lidership-img-2.png");
+        background-repeat: no-repeat;
+        background-position: right top 45%;
+    
+
+        b {
+          @include font(18px, 400);
+          color: #2A407A;
+          line-height: 28px;
+          display: flex;
+          align-items: center;
+          margin-bottom: 8px;
+          gap: 4px;
+          span {
+            width: 4px;
+            height: 21px;
+            opacity: 1;
+            border-radius: 4px;
+            background-color: #2A407A;
+          }
+        }
+        &-line {
+          width: 100%;
+          height: 0.5px;
+          background-color: #E2E8F0;
+          margin-bottom: 10px;
+        }
+        h3 {
+          @include font(24px, 500);
+          color:#0F172A;
+          line-height: 32px;
+          margin-bottom: 8px;
+        }
+        p {
+          @include font(16px, 400);
+          color: #475569;
+          line-height: 24px;
+          margin-bottom: 12px;
+        }
+        &-link {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 16px;
+          button {
+            padding: 6px;
+            border: 1px solid #E2E8F0;
+            border-radius: 6px;
+            background: #FFFFFF1A;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            @include font(16px, 400);
+            color: #2A407A;
+            line-height: 24px;
+            i {
+              font-size: 20px;
+            }
+          }
+          a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            @include font(20px, 400);
+            color:#2A407A;
+            line-height: 30px;
+            i {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
