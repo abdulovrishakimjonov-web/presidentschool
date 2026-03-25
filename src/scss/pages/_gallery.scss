@@ -1,5 +1,4 @@
 .gallery {
-
   &-section {
     margin-bottom: 110px;
     &-link {
@@ -18,7 +17,7 @@
         gap: 8px;
         justify-content: center;
         margin-bottom: 24px;
-        color: #48A6A7;
+        color: #48a6a7;
         i {
           font-size: 20px;
         }
@@ -29,17 +28,16 @@
         justify-content: space-between;
         gap: 20px;
         h3 {
-          @include font( 30px, 500);
-          color: #0F172A;
+          @include font(30px, 500);
+          color: #0f172a;
         }
         a {
           @include font(20px, 400);
-          color: #2A407A;
+          color: #2a407a;
           display: flex;
           align-items: center;
           gap: 8px;
         }
-
       }
     }
 
@@ -47,19 +45,35 @@
       display: flex;
       align-items: center;
       gap: 16px;
+
       &-card {
         display: flex;
-        align-items: center;
         flex-direction: column;
         gap: 16px;
+
+        a {
+          display: block;
+          overflow: hidden;
+          border-radius: 8px;
+        }
+
+        img {
+          width: 100%;
+          height: auto;
+          display: block;
+          transition: all 0.3s ease;
+        }
+
+        a:hover img {
+          filter: blur(2px);
+          transform: scale(1.05);
+        }
       }
     }
-
   }
 
   &-page {
     padding: 60px 0;
-
     &-main {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -94,19 +108,46 @@
           height: 100%;
           display: block;
           object-fit: cover;
+          transition: transform 0.5s ease;
+
+        }
+
+        &:hover img {
+          transform: scale(1.08);
         }
 
         &-overlay {
           position: absolute;
           inset: 0;
-
-          background: linear-gradient(
-            to bottom,
-            rgba(0, 0, 0, 0) 50%,
-            rgba(0, 0, 0, 0.7) 100%
-          );
-
+          z-index: 1;
           pointer-events: none;
+          overflow: hidden;
+
+          &::before {
+            content: "";
+            position: absolute;
+
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 180px;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+
+            background: linear-gradient(
+              to top,
+              rgba(0, 0, 0, 0) 0%,
+              rgba(0, 0, 0, 0) 0%,
+              rgba(0, 0, 0, 0) 0%
+			  
+            );
+          }
         }
 
         &-text {
@@ -116,12 +157,6 @@
           bottom: 28px;
           z-index: 2;
 
-          background: linear-gradient(
-            to bottom,
-            rgba(0, 0, 0, 0) 50%,
-            rgba(0, 0, 0, 0.6) 100%
-          );
-
           @include devices(md) {
             left: 20px;
             right: 20px;
@@ -129,12 +164,8 @@
           }
 
           h3 {
-            font-size: 48px;
-            font-weight: 600;
-            line-height: 1.2;
-            color: #ffffff;
-            margin-bottom: 20px;
-
+            @include font(var(--white), 36px, 500);
+            margin-bottom: 24px;
             @include devices(lg) {
               font-size: 40px;
             }
@@ -157,11 +188,8 @@
             flex-wrap: wrap;
 
             p {
-              font-size: 20px;
-              font-weight: 500;
-              line-height: 1.4;
-              color: #ffffff;
-              margin: 0;
+              @include font(var(--white), 20px, 400);
+              opacity: 90%;
 
               @include devices(md) {
                 font-size: 16px;
@@ -172,10 +200,8 @@
               display: inline-flex;
               align-items: center;
               gap: 10px;
-              font-size: 20px;
-              font-weight: 500;
-              line-height: 1.4;
-              color: #ffffff;
+              @include font(var(--white), 20px 400);
+              opacity: 90%;
               text-decoration: none;
               transition: all 0.3s ease;
 
@@ -229,18 +255,44 @@
             height: 100%;
             display: block;
             object-fit: cover;
+            transition: transform 0.5s ease;
+          }
+
+          &:hover img {
+            transform: scale(1.08);
           }
 
           &-overlay {
             position: absolute;
             inset: 0;
-            background: linear-gradient(
-              180deg,
-              rgba(0, 0, 0, 0.06) 0%,
-              rgba(0, 0, 0, 0.1) 35%,
-              rgba(0, 0, 0, 0.6) 100%
-            );
+            z-index: 1;
             pointer-events: none;
+            overflow: hidden;
+
+            &::before {
+              content: "";
+              position: absolute;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              height: 110px;
+
+              backdrop-filter: blur(8px);
+              -webkit-backdrop-filter: blur(8px);
+            }
+
+            &::after {
+              content: "";
+              position: absolute;
+              inset: 0;
+
+              background: linear-gradient(
+                to top,
+                rgba(0, 0, 0, 0.45) 0%,
+                rgba(0, 0, 0, 0.2) 30%,
+                rgba(0, 0, 0, 0) 100%
+              );
+            }
           }
 
           &-text {
@@ -251,11 +303,8 @@
             z-index: 2;
 
             h3 {
-              font-size: 24px;
-              font-weight: 600;
-              line-height: 1.3;
-              color: #ffffff;
-              margin-bottom: 10px;
+              @include font(var(--white), 24px, 500);
+              margin-bottom: 18px;
 
               display: -webkit-box;
               -webkit-line-clamp: 2;
@@ -279,11 +328,7 @@
               flex-wrap: wrap;
 
               p {
-                font-size: 16px;
-                font-weight: 500;
-                line-height: 1.4;
-                color: #ffffff;
-                margin: 0;
+                @include font(var(--white), 20px, 300);
 
                 @include devices(sm) {
                   font-size: 14px;
@@ -294,10 +339,7 @@
                 display: inline-flex;
                 align-items: center;
                 gap: 8px;
-                font-size: 16px;
-                font-weight: 500;
-                line-height: 1.4;
-                color: #ffffff;
+                @include font(var(--white), 20px, 300);
                 text-decoration: none;
                 transition: all 0.3s ease;
 

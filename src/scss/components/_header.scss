@@ -1,6 +1,6 @@
 .header {
-  color: black;
-  background: #ffffff;
+  color: var(--black);
+  background: var(--white);
   position: absolute;
   top: 0;
   z-index: 1000;
@@ -83,7 +83,7 @@
           justify-content: center;
           i {
             font-size: 24px;
-            color: #ffffff;
+            color: var(--white);
           }
         }
       }
@@ -99,7 +99,7 @@
           border: 6px;
         }
         i {
-          color: #ffffff;
+          color: var(--white);
           font-size: 12px;
         }
         p {
@@ -107,7 +107,7 @@
           font-size: 16px;
           line-height: 24px;
           letter-spacing: 0%;
-          color: #ffffff;
+          color: var(--white);
         }
       }
     }
