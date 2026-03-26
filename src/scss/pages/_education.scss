@@ -377,10 +377,40 @@
         background-position: top 100% center;
         background-color: #147e5c;
       }
+
+	   &-image1 {
+        background-image: url("../../images/education-img-11.svg");
+        background-repeat: no-repeat;
+        background-position: top 100% center;
+        background-color: #48a6a7;
+      }
+      &-image2 {
+        background-image: url("../../images/education-img-12.svg");
+        background-repeat: no-repeat;
+        background-position: top 100% center;
+        background-color: #2A407A;
+      }
+      &-image3 {
+        background-image: url("../../images/education-img-5.svg");
+        background-repeat: no-repeat;
+        background-position: top 100% center;
+        background-color: #608BC1;
+      }
+      &-image4 {
+        background-image: url("../../images/education-img-13.svg");
+        background-repeat: no-repeat;
+        background-position: top 100% center;
+        background-color: #147E5C;
+      }
+      &-image5 {
+        background-image: url("../../images/education-img-14.svg");
+        background-repeat: no-repeat;
+        background-position: top 100% center;
+        background-color: #155E95;
+      }
     }
 
     &-faq {
-      // padding:;
       background: #f3f5f8;
 
       &__title {
@@ -450,30 +480,26 @@
       &__head-left {
         display: flex;
         align-items: center;
-        gap: 14px;
+        gap: 16px;
         min-width: 0;
 
         h3 {
           margin: 0 0 4px;
-          color: #ffffff;
-          font-size: 17px;
-          font-weight: 600;
+          @include font(#FFFFFF, 24px, 500);
           line-height: 1.2;
         }
 
         p {
           margin: 0;
-          color: rgba(255, 255, 255, 0.9);
-          font-size: 12px;
-          font-weight: 400;
+          @include font(#FFFFFF, 16px, 400);
           line-height: 1.2;
         }
       }
 
-      &__head-icon {
+      i {
         flex: 0 0 auto;
         color: #ffffff;
-        font-size: 28px;
+        font-size: 30px;
         line-height: 1;
       }
 
@@ -511,9 +537,7 @@
 
         p {
           margin: 0;
-          color: #344054;
-          font-size: 14px;
-          font-weight: 400;
+          @include font(#334155, 16px, 400);
           line-height: 1.45;
         }
       }

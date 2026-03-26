@@ -282,57 +282,192 @@
     </div>
 </section>
     <section class="news">
-    <div class="news-section">
-        <div class="container">
-            <div class="news-section-link">
-                <div class="news-section-link-text">
-                    <a href="#"><i class="i-directbox-notif"></i>Yangliklar</a>
-                    <h3>Maktab yangliklari</h3>
-                </div>
-                <a href="#">Barchasi <i class="i-right"></i></a>
-            </div>
-            <div class="news-section-main">
-                <div class="news-section-main-wrapper">
-                    <div class="news-section-main-wrapper-card">
-                        <img src="./images/news-img-1.png" alt="">
-                        <div class="news-section-main-wrapper-card-start">
-                            <h4>Prezident maktabida yangi STEM laboratoriyasi rasman ochildi</h4>
-                            <p>Prezident maktabida o‘quvchilar o‘rtasida amaliy bilim olish va innovatsiyalarni
-                                rivojlantirish maqsadida zamonaviy texnologiyalar bilan..</p>
-                            <div class="news-section-main-wrapper-card-start-top"></div>
-                            <div class="news-section-main-wrapper-card-start-link">
-                                <div class="news-section-main-wrapper-card-start-link-text">
-                                    <a href="#"><i class="i-calendar-2"></i>27/01/2026</a>
-                                    <a href="#"><i class="i-eye"></i>123</a>
-                                </div>
-                                <a href="#">Ko’rish <i class="i-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="news-section-main-wrapper-card">
-                        <img src="./images/news-img-2.png" alt="">
-                        <div class="news-section-main-wrapper-card-start">
-                            <h4>Prezident maktabida yangi STEM laboratoriyasi rasman ochildi</h4>
-                            <p>Prezident maktabida o‘quvchilar o‘rtasida amaliy bilim olish va innovatsiyalarni
-                                rivojlantirish maqsadida zamonaviy texnologiyalar bilan..</p>
-                            <div class="news-section-main-wrapper-card-start-top"></div>
-                            <div class="news-section-main-wrapper-card-start-link">
-                                <div class="news-section-main-wrapper-card-start-link-text">
-                                    <a href="#"><i class="i-calendar-2"></i>27/01/2026</a>
-                                    <a href="#"><i class="i-eye"></i>123</a>
-                                </div>
-                                <a href="#">Ko’rish <i class="i-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-			<div class="news-section-wrapper">
-				
+	<div class="news-section">
+		<div class="container">
+			<div class="news-section-link">
+				<div class="news-section-link-text">
+					<a href="#"><i class="i-directbox-notif"></i>Yangliklar</a>
+					<h3>Maktab yangliklari</h3>
+				</div>
+				<a href="#">Barchasi <i class="i-right"></i></a>
 			</div>
-        </div>
-    </div>
+			<div class="news-section-main">
+				<div class="news-section-main-wrapper">
+					<div class="news-section-main-wrapper-card">
+						<img src="./images/news-img-1.png" alt="">
+						<div class="news-section-main-wrapper-card-start">
+							<h4>Prezident maktabida yangi STEM laboratoriyasi rasman ochildi</h4>
+							<p>Prezident maktabida o‘quvchilar o‘rtasida amaliy bilim olish va innovatsiyalarni
+								rivojlantirish maqsadida zamonaviy texnologiyalar bilan..</p>
+							<div class="news-section-main-wrapper-card-start-top"></div>
+							<div class="news-section-main-wrapper-card-start-link">
+								<div class="news-section-main-wrapper-card-start-link-text">
+									<a href="#"><i class="i-calendar-2"></i>27/01/2026</a>
+									<a href="#"><i class="i-eye"></i>123</a>
+								</div>
+								<a href="#">Ko’rish <i class="i-right"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="news-section-main-wrapper-card">
+						<img src="./images/news-img-2.png" alt="">
+						<div class="news-section-main-wrapper-card-start">
+							<h4>Prezident maktabida yangi STEM laboratoriyasi rasman ochildi</h4>
+							<p>Prezident maktabida o‘quvchilar o‘rtasida amaliy bilim olish va innovatsiyalarni
+								rivojlantirish maqsadida zamonaviy texnologiyalar bilan..</p>
+							<div class="news-section-main-wrapper-card-start-top"></div>
+							<div class="news-section-main-wrapper-card-start-link">
+								<div class="news-section-main-wrapper-card-start-link-text">
+									<a href="#"><i class="i-calendar-2"></i>27/01/2026</a>
+									<a href="#"><i class="i-eye"></i>123</a>
+								</div>
+								<a href="#">Ko’rish <i class="i-right"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="news-section-main-wrapper">
+				<div class="news-section-main-wrapper__track" id="track"></div>
+
+				<div class="news-section-main-wrapper__nav">
+					<button class="news-section-main-wrapper__btn" id="prevBtn" type="button">&#8593;</button>
+					<button class="news-section-main-wrapper__btn" id="nextBtn" type="button">&#8595;</button>
+				</div>
+
+			</div>
+			</div>
+			
+		</div>
+	</div>
 </section>
+
+<script>
+  const newsData = [
+    {
+      image: "../../images/news-img-1.png",
+      title: "Prezident maktabi o‘quvchilari xalqaro olimpiadalarda yuqori natijalarga erishmoqda",
+      date: "27/01/2026",
+      views: "123",
+      link: "#"
+    },
+    {
+      image: "../../images/news-img-2.png",
+      title: "Maktab o‘quvchilari yangi loyihalarda faol ishtirok etmoqda",
+      date: "28/01/2026",
+      views: "98",
+      link: "#"
+    },
+    {
+      image: "../../images/news-img-3.png",
+      title: "Xalqaro fan musobaqalarida navbatdagi yutuqlar qo‘lga kiritildi",
+      date: "29/01/2026",
+      views: "145",
+      link: "#"
+    },
+    {
+      image: "../../images/news-img-1.png",
+      title: "Yangi laboratoriyalar va zamonaviy ta’lim muhiti yo‘lga qo‘yildi",
+      date: "30/01/2026",
+      views: "167",
+      link: "#"
+    },
+    {
+      image: "../../images/news-img-2.png",
+      title: "O‘quvchilar o‘rtasida navbatdagi tanlov g‘oliblari taqdirlandi",
+      date: "31/01/2026",
+      views: "201",
+      link: "#"
+    }
+  ];
+
+  const track = document.getElementById("track");
+  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("nextBtn");
+
+  let current = 0;
+  let cards = [];
+
+  function getRelativePosition(index, currentIndex, total) {
+    let diff = index - currentIndex;
+
+    if (diff > total / 2) diff -= total;
+    if (diff < -total / 2) diff += total;
+
+    if (diff < -2 || diff > 2) return "hidden";
+    return String(diff);
+  }
+
+  function createCard(item, index) {
+    const card = document.createElement("div");
+    card.className = "news-section-main-wrapper__card";
+    card.dataset.index = index;
+
+    card.innerHTML = `
+      <img src="${item.image}" alt="">
+      <div class="news-section-main-wrapper__overlay"></div>
+      <div class="news-section-main-wrapper__content">
+        <h3 class="news-section-main-wrapper__title">${item.title}</h3>
+        <div class="news-section-main-wrapper__bottom">
+          <div class="news-section-main-wrapper__meta">
+            <span><i class="i-calendar-2"></i>${item.date}</span>
+            <span><i class="i-eye"></i>${item.views}</span>
+          </div>
+          <a href="${item.link}" class="news-section-main-wrapper__link">
+            Ko‘rish <i class="i-right"></i>
+          </a>
+        </div>
+      </div>
+    `;
+
+    card.addEventListener("click", (e) => {
+      const cardIndex = Number(card.dataset.index);
+
+      if (cardIndex === current && !e.target.closest("a")) {
+        window.location.href = item.link;
+      }
+
+      if (cardIndex !== current) {
+        current = cardIndex;
+        updateCarousel();
+      }
+    });
+
+    return card;
+  }
+
+  function buildCarousel() {
+    track.innerHTML = "";
+
+    cards = newsData.map((item, index) => {
+      const card = createCard(item, index);
+      track.appendChild(card);
+      return card;
+    });
+
+    updateCarousel();
+  }
+
+  function updateCarousel() {
+    const total = newsData.length;
+
+    cards.forEach((card, index) => {
+      card.setAttribute("data-pos", getRelativePosition(index, current, total));
+    });
+  }
+
+  prevBtn.addEventListener("click", () => {
+    current = (current - 1 + newsData.length) % newsData.length;
+    updateCarousel();
+  });
+
+  nextBtn.addEventListener("click", () => {
+    current = (current + 1) % newsData.length;
+    updateCarousel();
+  });
+
+  buildCarousel();
+</script>
     <section class="education">
     <div class="education-section">
         <div class="container">
@@ -553,7 +688,7 @@
         <div class="footer-main">
             <div class="footer-main-right">
                 <div class="footer-main-right-text">
-                    <a href="#">Biz haqimizda</a>
+                    <a href="../../about.html">Biz haqimizda</a>
                     <a href="#">Rahbariyat</a>
                     <a href="#">Ta’lim</a>
                     <a href="#">Qabul</a>
