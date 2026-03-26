@@ -74,7 +74,6 @@
         grid-template-columns: 1fr;
       }
 
-
       &-card {
         position: relative;
         overflow: hidden;
@@ -305,7 +304,7 @@
       background-color: #ffffff;
       h3 {
         @include font(30px, 500);
-        color: #0F172A;
+        color: #0f172a;
         margin-bottom: 8px;
         text-align: center;
       }
@@ -378,7 +377,7 @@
         background-color: #147e5c;
       }
 
-	   &-image1 {
+      &-image1 {
         background-image: url("../../images/education-img-11.svg");
         background-repeat: no-repeat;
         background-position: top 100% center;
@@ -388,25 +387,25 @@
         background-image: url("../../images/education-img-12.svg");
         background-repeat: no-repeat;
         background-position: top 100% center;
-        background-color: #2A407A;
+        background-color: #2a407a;
       }
       &-image3 {
         background-image: url("../../images/education-img-5.svg");
         background-repeat: no-repeat;
         background-position: top 100% center;
-        background-color: #608BC1;
+        background-color: #608bc1;
       }
       &-image4 {
         background-image: url("../../images/education-img-13.svg");
         background-repeat: no-repeat;
         background-position: top 100% center;
-        background-color: #147E5C;
+        background-color: #147e5c;
       }
       &-image5 {
         background-image: url("../../images/education-img-14.svg");
         background-repeat: no-repeat;
         background-position: top 100% center;
-        background-color: #155E95;
+        background-color: #155e95;
       }
     }
 
@@ -485,13 +484,13 @@
 
         h3 {
           margin: 0 0 4px;
-          @include font(#FFFFFF, 24px, 500);
+          @include font(#ffffff, 24px, 500);
           line-height: 1.2;
         }
 
         p {
           margin: 0;
-          @include font(#FFFFFF, 16px, 400);
+          @include font(#ffffff, 16px, 400);
           line-height: 1.2;
         }
       }
@@ -545,7 +544,7 @@
       &__time {
         min-width: 62px;
         padding: 6px 8px;
-        border-radius: 6px;
+        border-radius: 	6px;
         background: #eaf0f7;
         color: #5a87c4;
         font-size: 11px;
@@ -601,14 +600,14 @@
     &-wrapper {
       padding: 24px;
       border-radius: 12px;
-      background-color: #FFFFFF;
+      background-color: #ffffff;
       margin-bottom: 60px;
       &-text {
         text-align: center;
         margin-bottom: 24px;
         h3 {
           @include font(30px, 500);
-          color: #0F172A;
+          color: #0f172a;
           margin-bottom: 8px;
         }
         p {
@@ -620,23 +619,23 @@
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         gap: 27px;
-        
+
         &-colors1 {
-          background-color:#48A6A71A ;
+          background-color: #48a6a71a;
         }
         &-colors2 {
-          background-color:#84CC161A ;
+          background-color: #84cc161a;
         }
         &-colors3 {
-          background-color:#F59E0B1A ;
+          background-color: #f59e0b1a;
         }
         &-colors4 {
-          background-color:#F973161A ;
+          background-color: #f973161a;
         }
         &-colors5 {
-          background-color:#DC26261A ;
+          background-color: #dc26261a;
         }
-        
+
         &-cards {
           padding: 16px;
           border-radius: 12px;
@@ -646,11 +645,11 @@
           flex-direction: column;
           text-align: center;
           img {
-            margin-bottom: 12px
+            margin-bottom: 12px;
           }
           h5 {
             @include font(24px, 500);
-            color: #0F172A;
+            color: #0f172a;
             margin-bottom: 8px;
           }
           p {
@@ -659,7 +658,6 @@
           }
         }
       }
-
     }
   }
 }
