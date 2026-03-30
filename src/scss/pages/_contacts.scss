@@ -4,6 +4,11 @@
   justify-content: space-between;
   gap: 16px;
 
+  @include devices(md) {
+	 flex-direction: column;
+	 align-items: center;
+  }
+
   &-main {
     width: 497px;
     padding: 24px;
@@ -12,6 +17,10 @@
     display: flex;
     gap: 16px;
     flex-direction: column;
+
+	@include devices(md) {
+		width: 100%;
+  }
 
     &-image1 {
       background-image: url("../../images/contacts-img-1.svg");
@@ -76,6 +85,9 @@
     background-color: var(--white);
     border-radius: 12px;
 
+	@include devices(md) {
+		width: 100%;
+  }
     h3 {
       @include font(#0f172a, 30px, 500);
       line-height: 30px;

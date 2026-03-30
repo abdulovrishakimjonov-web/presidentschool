@@ -1,7 +1,7 @@
 .about {
   &-section {
     background: var(--neutral1000);
-    padding: 80px 0px; // reduced padding for better mobile fit
+    padding: 100px 0px;
     background-image: url("../../images/about-img-5.png");
     background-repeat: no-repeat;
     background-position: left 0px top 180px;
@@ -9,13 +9,13 @@
       display: flex;
       justify-content: space-between;
       gap: 45px;
-      flex-wrap: wrap; // allow items to wrap on small screens
+      flex-wrap: wrap;
     }
     &-text {
       display: flex;
       flex-direction: column;
       width: 100%;
-      max-width: 760px; // keep content readable on large screens
+      max-width: 760px;
       a {
         @include font(var(--card700), 16px, 400, 1.5);
         line-height: 24px;
@@ -49,7 +49,7 @@
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        padding: 8px 24px;
+        padding: 8px 24px 14px 24px;
         border: 1px solid rgba(255, 255, 255, 0.14);
         border-radius: 12px;
         background: linear-gradient(180deg, #0d2460 0%, #2a407a 100%);
@@ -64,13 +64,14 @@
 
         &::after {
           content: "";
+          width: 98%;
           position: absolute;
-          left: 10px;
+          left: 3px;
           right: 10px;
           bottom: 0px;
-          height: 3px;
-          border-radius: 0 0 12px 12px;
-          background: #122e71;
+          height: 5px;
+          border-radius: 0 0 30px 30px;
+          background: #00000033;
           z-index: -1;
         }
 
@@ -156,7 +157,7 @@
             width: 100%;
             height: 100%;
             object-fit: contain;
-            animation: spin 6s linear infinite;
+            animation: spin 15s linear infinite;
           }
 
           @include devices(md) {
@@ -443,7 +444,7 @@
           width: 100%;
           height: 100%;
           object-fit: contain;
-          animation: spin 6s linear infinite;
+          animation: spin 15s linear infinite;
 
           @include devices(sm) {
             max-width: 220px;

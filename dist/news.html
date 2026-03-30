@@ -33,21 +33,34 @@
 					<a href=""><i class="i-instagram"></i></a>
 					<a href=""><i class="i-youtube"></i></a>
 					<a href=""><i class="i-facebook"></i></a>
-					<a href=""><i class="i-telegram"></i></a> 
+					<a href=""><i class="i-telegram"></i></a>
 				</div>
-				<a class="header-top-left-link" href="#">
-					<img src="../../images/flag-uz.png" alt="">
-					<p>uzb</p>
-					<i class="i-dropdawun"></i>
-				</a>
+				<!-- language dropdown -->
+				<div class="header-top-lang">
+					<button class="header-top-lang-toggle" type="button" aria-haspopup="listbox" aria-expanded="false">
+						<img src="../../images/flag-uz.png" alt="uz">
+						<span class="header-top-lang-label">uzb</span>
+						<i class="i-dropdawun"></i>
+					</button>
+					<ul class="header-top-lang-menu" role="listbox" hidden>
+						<li role="option" data-lang="uz" data-flag="../../images/flag-uz.png"> <img
+								src="../../images/flag-uz.png" alt="uz"> <span>uzb</span></li>
+						<li role="option" data-lang="ru" data-flag="../../images/flag-ru.png"> <img
+								src="../../images/flag-ru.png" alt="ru"> <span>ru</span></li>
+						<li role="option" data-lang="en" data-flag="../../images/flag-en.png"> <img
+								src="../../images/flag-en.png" alt="en"> <span>eng</span></li>
+					</ul>
+				</div>
+				<!-- end language dropdown -->
 			</div>
 
 		</div>
 	</div>
 	<a class="header-logo" href="/"><img src="./images/logo.svg" alt=""></a>
-	<button class="header__menu-btn " hidden type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-expanded="false">
-            <span class="header__burger" aria-hidden="true">1</span>
-        </button>
+	<button class="header__menu-btn " hidden type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu"
+		aria-controls="offcanvasMenu" aria-expanded="false">
+		<span class="header__burger" aria-hidden="true"></span>
+	</button>
 	<div class="header-text">
 		<div class="container">
 			<div class="header-text-right">
@@ -65,6 +78,61 @@
 		</div>
 	</div>
 </header>
+
+<script>
+	(function () {
+		const toggle = document.querySelector('.header-top-lang-toggle');
+		const menu = document.querySelector('.header-top-lang-menu');
+		const label = document.querySelector('.header-top-lang-label');
+
+		if (!toggle || !menu) return;
+
+		toggle.setAttribute('aria-expanded', String(!menu.hidden));
+
+		function closeMenu() {
+			menu.hidden = true;
+			toggle.setAttribute('aria-expanded', 'false');
+		}
+
+		function openMenu() {
+			menu.hidden = false;
+			toggle.setAttribute('aria-expanded', 'true');
+			const first = menu.querySelector('li[role="option"]');
+			if (first) first.focus();
+		}
+
+		toggle.addEventListener('click', (e) => {
+			e.stopPropagation();
+			if (menu.hidden) openMenu(); else closeMenu();
+		});
+
+		toggle.addEventListener('keydown', (e) => {
+			if (e.key === 'ArrowDown' || e.key === 'Enter' || e.key === ' ') {
+				e.preventDefault();
+				openMenu();
+			}
+		});
+
+		menu.addEventListener('click', (e) => {
+			const li = e.target.closest('li[role="option"]');
+			if (!li) return;
+			const lang = li.dataset.lang;
+			const flag = li.dataset.flag;
+			// update UI
+			const img = toggle.querySelector('img');
+			if (img) img.src = flag;
+			if (label) label.textContent = li.querySelector('span').textContent;
+			closeMenu();
+
+		});
+
+		document.addEventListener('click', (e) => {
+			if (!e.target.closest('.header-top-lang')) closeMenu();
+		});
+
+		document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
+	})();
+</script>
     <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasMenu"
 	aria-labelledby="offcanvasMenuLabel">
 	<div class="offcanvas-header">

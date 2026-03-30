@@ -504,7 +504,128 @@
     }
   }
 
-  // Responsive adjustments
+  .header-top-lang {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+
+    .header-top-lang-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 8px;
+      background: transparent;
+      border: 0;
+      color: var(--white);
+      cursor: pointer;
+      border-radius: 8px;
+
+      img {
+        width: 20px;
+        height: 14px;
+        object-fit: cover;
+        display: block;
+      }
+
+      .header-top-lang-label {
+        font-size: 14px;
+        line-height: 1;
+        color: var(--whitew);
+        text-transform: lowercase;
+      }
+
+      i {
+        font-size: 12px;
+        color: var(--whitew);
+        transition: transform 0.2s ease-in-out;
+      }
+
+      &[aria-expanded="true"] i {
+        transform: rotate(180deg);
+      }
+    }
+
+    .header-top-lang-menu {
+      position: absolute;
+      right: 0;
+      top: calc(100% + 8px);
+      background: var(--white);
+      box-shadow: 0 6px 18px rgba(10, 20, 40, 0.16);
+      border-radius: 8px;
+      padding: 6px 6px;
+      min-width: 140px;
+      list-style: none;
+      margin: 0;
+      z-index: 300;
+      display: block;
+
+      &[hidden] {
+        display: none;
+      }
+
+      li[role="option"] {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 10px;
+        border-radius: 6px;
+        cursor: pointer;
+        color: var(--neutral800);
+        background: transparent;
+        transition:
+          background 0.15s ease-in-out,
+          color 0.15s ease-in-out;
+
+        img {
+          width: 20px;
+          height: 14px;
+          display: inline-block;
+        }
+
+        &:hover,
+        &:focus {
+          background: rgba(0, 0, 0, 0.04);
+        }
+      }
+    }
+
+    @include devices(md) {
+      .header-top-lang-toggle {
+        padding: 5px;
+
+        img {
+          width: 18px;
+        }
+
+        .header-top-lang-label {
+          font-size: 13px;
+        }
+      }
+
+      .header-top-lang-menu {
+        min-width: 120px;
+      }
+    }
+
+    @include devices(sm) {
+      .header-top-lang-toggle {
+        padding: 4px;
+
+        img {
+          width: 16px;
+        }
+
+        .header-top-lang-label {
+          display: none;
+        }
+
+        i {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
   @include devices(md) {
     &-logo {
       margin-bottom: 6px;
@@ -560,7 +681,6 @@
   }
 
   @include devices(sm) {
-    // compact mobile layout
     position: fixed;
     height: 100px;
 
@@ -578,7 +698,7 @@
     }
 
     &-top {
-      display: none; // hide the top info bar on small screens to save space
+      display: none;
     }
 
     &-text {
@@ -620,7 +740,6 @@
     }
   }
 
-  // On small screens hide the header-text links and show burger/menu button
   @include devices(sm) {
     &-text {
       display: none;
