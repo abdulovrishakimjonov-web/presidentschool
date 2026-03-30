@@ -9,6 +9,14 @@
   position: fixed;
   height: 150px;
 
+  @include devices(md) {
+    height: 120px;
+  }
+
+  @include devices(sm) {
+    height: 100px;
+  }
+
   *,
   & {
     transition: all 0.2s ease-in-out;
@@ -38,6 +46,31 @@
     top: 0%;
     transform: translate(-50%);
     padding: 8px;
+
+    @include devices(md) {
+      margin-bottom: 6px;
+      padding: 6px;
+      top: 4%;
+      transform: translate(-50%, 0);
+
+      img {
+        max-height: 72px;
+        height: auto;
+      }
+    }
+
+    @include devices(sm) {
+      margin-bottom: 0;
+      left: 16px;
+      top: 8px;
+      transform: none;
+      padding: 4px;
+
+      img {
+        max-height: 56px;
+        height: auto;
+      }
+    }
   }
 
   &-top {
@@ -65,11 +98,21 @@
           font-size: 20px;
         }
       }
+
+      @include devices(md) {
+        padding: 12px 0;
+        gap: 20px;
+
+        a {
+          padding: 5px;
+        }
+      }
     }
     &-left {
       display: flex;
       align-items: center;
       gap: 32px;
+
       &-line {
         display: flex;
         align-items: center;
@@ -87,6 +130,7 @@
           }
         }
       }
+
       &-link {
         display: flex;
         align-items: center;
@@ -94,22 +138,43 @@
         padding: 7px 6px;
         border-radius: 8px;
         gap: 8px;
+
         img {
           width: 24px;
           border: 6px;
         }
+
         i {
           color: var(--white);
           font-size: 12px;
         }
+
         p {
           font-weight: 400;
           font-size: 16px;
           line-height: 24px;
           letter-spacing: 0%;
-          color: var(--white);
+          color: var(--whitew);
+        }
+
+        @include devices(md) {
+          p {
+            font-size: 14px;
+          }
+        }
+
+        @include devices(sm) {
+          gap: 12px;
+
+          a {
+            font-size: 14px;
+          }
         }
       }
+    }
+
+    @include devices(sm) {
+      display: none; // hide the top info bar on small screens to save space
     }
   }
 
@@ -118,7 +183,7 @@
     background-color: #ffffff1a;
     backdrop-filter: blur(10px);
     .container {
-      display: flex;  
+      display: flex;
       align-items: center;
       justify-content: space-between;
     }
@@ -131,6 +196,18 @@
         font-size: 18px;
         color: var(--neutral900);
       }
+
+      @include devices(md) {
+        gap: 48px;
+      }
+
+      @include devices(sm) {
+        gap: 16px;
+
+        a {
+          font-size: 14px;
+        }
+      }
     }
     &-left {
       display: flex;
@@ -140,6 +217,32 @@
         font-weight: 400;
         font-size: 18px;
         color: var(--neutral900);
+      }
+
+      @include devices(md) {
+        gap: 40px;
+      }
+
+      @include devices(sm) {
+        gap: 12px;
+
+        a {
+          font-size: 14px;
+        }
+      }
+    }
+
+    @include devices(md) {
+      padding: 18px 0px;
+    }
+
+    @include devices(sm) {
+      padding: 10px 0px;
+      background-color: transparent;
+
+      .container {
+        flex-direction: row;
+        align-items: center;
       }
     }
   }
@@ -166,6 +269,21 @@
 
     &::after {
       top: 6px;
+    }
+
+    @include devices(md) {
+      display: inline-block;
+    }
+
+    @include devices(sm) {
+      display: inline-block;
+      width: 24px;
+      height: 2px;
+
+      &::before,
+      &::after {
+        width: 20px;
+      }
     }
   }
 
@@ -289,12 +407,7 @@
       animation: rgb 6s ease-in-out infinite forwards;
 
       @include devices(md) {
-        padding: 0;
-        width: 36px;
-        height: 36px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        padding: 6px 8px;
       }
 
       @include devices(sm) {
@@ -355,6 +468,162 @@
       &:hover {
         background: lighten(#1b4447, 5%);
       }
+    }
+  }
+
+  &__menu-btn {
+    display: none;
+    background: transparent;
+    border: 0;
+    color: var(--neutral800);
+    cursor: pointer;
+    position: absolute;
+    right: 16px;
+    top: 18px;
+    z-index: 200;
+
+    svg,
+    .header__burger {
+      display: inline-block;
+    }
+
+    @include devices(md) {
+      display: none;
+    }
+
+    @include devices(sm) {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      background: rgba(0, 0, 0, 0.06);
+      border-radius: 8px;
+      right: 12px;
+      top: 16px;
+    }
+  }
+
+  // Responsive adjustments
+  @include devices(md) {
+    &-logo {
+      margin-bottom: 6px;
+      padding: 6px;
+      top: 4%;
+      transform: translate(-50%, 0);
+
+      img {
+        max-height: 72px;
+        height: auto;
+      }
+    }
+
+    &-top {
+      .container {
+        gap: 12px;
+      }
+      &-right {
+        padding: 12px 0;
+        gap: 20px;
+        a {
+          padding: 5px;
+        }
+      }
+      &-left {
+        gap: 20px;
+        &-link p {
+          font-size: 14px;
+        }
+      }
+    }
+
+    &-text {
+      padding: 18px 0px;
+
+      &-right {
+        gap: 48px;
+      }
+      &-left {
+        gap: 40px;
+      }
+    }
+
+    &__menu {
+      gap: 12px;
+    }
+    &__test {
+      padding: 6px 8px;
+    }
+    &__burger {
+      display: inline-block;
+    }
+  }
+
+  @include devices(sm) {
+    // compact mobile layout
+    position: fixed;
+    height: 100px;
+
+    &-logo {
+      margin-bottom: 0;
+      left: 16px;
+      top: 8px;
+      transform: none;
+      padding: 4px;
+
+      img {
+        max-height: 56px;
+        height: auto;
+      }
+    }
+
+    &-top {
+      display: none; // hide the top info bar on small screens to save space
+    }
+
+    &-text {
+      padding: 10px 0px;
+      background-color: transparent;
+
+      .container {
+        flex-direction: row;
+        align-items: center;
+      }
+
+      &-right {
+        gap: 16px;
+        a {
+          font-size: 14px;
+        }
+      }
+      &-left {
+        gap: 12px;
+        a {
+          font-size: 14px;
+        }
+      }
+    }
+
+    &__menu {
+      display: none;
+    }
+
+    &__burger {
+      display: inline-block;
+      width: 24px;
+      height: 2px;
+
+      &::before,
+      &::after {
+        width: 20px;
+      }
+    }
+  }
+
+  // On small screens hide the header-text links and show burger/menu button
+  @include devices(sm) {
+    &-text {
+      display: none;
     }
   }
 }

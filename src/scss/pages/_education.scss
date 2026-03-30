@@ -273,28 +273,82 @@
     }
   }
   &-page {
-    &-text {
-      margin-bottom: 60px;
+    &-text,
+    &-main,
+    &-wrapper-text,
+    &-main2 {
       h3 {
         @include font(30px, 500);
         color: #0f172a;
-        line-height: 38px;
-        margin-bottom: 8px;
+        line-height: 1.3;
+
+        @include devices(lg) {
+          font-size: 28px;
+        }
+
+        @include devices(md) {
+          font-size: 24px;
+        }
+
+        @include devices(sm) {
+          font-size: 20px;
+        }
+
+        @include devices(xs) {
+          font-size: 18px;
+        }
       }
+
       p {
         @include font(18px, 400);
-        line-height: 28px;
         color: #475569;
+        line-height: 1.6;
+
+        @include devices(lg) {
+          font-size: 17px;
+        }
+
+        @include devices(md) {
+          font-size: 16px;
+        }
+
+        @include devices(sm) {
+          font-size: 15px;
+        }
+
+        @include devices(xs) {
+          font-size: 14px;
+        }
       }
     }
+
+    &-text {
+      margin-bottom: 60px;
+
+      @include devices(md) {
+        margin-bottom: 40px;
+        text-align: center;
+      }
+
+      h3 {
+        margin-bottom: 8px;
+      }
+    }
+
     &-main {
       text-align: center;
       margin-bottom: 60px;
+
+      @include devices(md) {
+        margin-bottom: 40px;
+      }
+
       h3 {
-        @include font(30px, 500);
-        color: #0f172a;
-        line-height: 38px;
         margin-bottom: 24px;
+
+        @include devices(sm) {
+          margin-bottom: 18px;
+        }
       }
     }
 
@@ -302,121 +356,190 @@
       padding: 24px;
       border-radius: 12px;
       background-color: #ffffff;
+
+      @include devices(md) {
+        padding: 20px;
+      }
+
+      @include devices(xs) {
+        padding: 16px;
+        border-radius: 10px;
+      }
+
       h3 {
-        @include font(30px, 500);
-        color: #0f172a;
         margin-bottom: 8px;
         text-align: center;
       }
+
       p {
-        @include font(18px, 400);
-        color: #475569;
         margin-bottom: 24px;
         text-align: center;
+
+        @include devices(sm) {
+          margin-bottom: 18px;
+        }
       }
     }
+
     &-cards {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
       gap: 16px;
 
+      @include devices(xl) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      @include devices(md) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @include devices(xs) {
+        grid-template-columns: 1fr;
+      }
+
       &-card {
-        padding: 24px 24px 50px 24px;
+        padding: 24px 20px 44px;
         border-radius: 12px;
-        width: 291px;
+        min-width: 0;
+        width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        text-align: center;
+        background-repeat: no-repeat;
+        background-position: bottom center;
+
+        @include devices(md) {
+          padding: 20px 16px 36px;
+        }
+
+        @include devices(xs) {
+          padding: 18px 14px 28px;
+          border-radius: 10px;
+        }
+
         i {
           font-size: 56px;
           color: var(--white);
           margin-bottom: 16px;
+
+          @include devices(md) {
+            font-size: 46px;
+            margin-bottom: 12px;
+          }
+
+          @include devices(xs) {
+            font-size: 38px;
+          }
         }
+
         h5 {
           @include font(24px, 500);
           color: var(--white);
-          line-height: 100%;
+          line-height: 1.2;
           margin-bottom: 10px;
+
+          @include devices(md) {
+            font-size: 20px;
+          }
+
+          @include devices(sm) {
+            font-size: 18px;
+          }
+
+          @include devices(xs) {
+            font-size: 16px;
+          }
         }
+
         p {
           @include font(16px, 400);
           color: #ffffffcc;
-          line-height: 26px;
+          line-height: 1.6;
           text-align: center;
+
+          @include devices(sm) {
+            font-size: 15px;
+          }
+
+          @include devices(xs) {
+            font-size: 14px;
+          }
         }
       }
+
       &-img1 {
         background-image: url("../../images/education-img-1.svg");
-        background-repeat: no-repeat;
-        background-position: top 100% center;
         background-color: #48a6a7;
       }
+
       &-img2 {
         background-image: url("../../images/education-img-2.svg");
-        background-repeat: no-repeat;
-        background-position: top 100% center;
         background-color: #608bc1;
       }
+
       &-img3 {
         background-image: url("../../images/education-img-3.svg");
-        background-repeat: no-repeat;
-        background-position: top 100% center;
         background-color: #155e95;
       }
+
       &-img4 {
         background-image: url("../../images/education-img-4.svg");
-        background-repeat: no-repeat;
-        background-position: top 100% center;
         background-color: #2a407a;
       }
+
       &-img5 {
         background-image: url("../../images/education-img-5.svg");
-        background-repeat: no-repeat;
-        background-position: top 100% center;
         background-color: #147e5c;
       }
 
       &-image1 {
         background-image: url("../../images/education-img-11.svg");
-        background-repeat: no-repeat;
-        background-position: top 100% center;
         background-color: #48a6a7;
       }
+
       &-image2 {
         background-image: url("../../images/education-img-12.svg");
-        background-repeat: no-repeat;
-        background-position: top 100% center;
         background-color: #2a407a;
       }
+
       &-image3 {
         background-image: url("../../images/education-img-5.svg");
-        background-repeat: no-repeat;
-        background-position: top 100% center;
         background-color: #608bc1;
       }
+
       &-image4 {
         background-image: url("../../images/education-img-13.svg");
-        background-repeat: no-repeat;
-        background-position: top 100% center;
         background-color: #147e5c;
       }
+
       &-image5 {
         background-image: url("../../images/education-img-14.svg");
-        background-repeat: no-repeat;
-        background-position: top 100% center;
         background-color: #155e95;
       }
     }
 
     &-faq {
       background: #f3f5f8;
+      padding: 24px 0;
+      border-radius: 12px;
+      margin-bottom: 60px;
+
+      @include devices(md) {
+        margin-bottom: 40px;
+        padding: 20px 0;
+      }
+
+      @include devices(xs) {
+        border-radius: 10px;
+      }
 
       &__title {
         margin: 0 0 18px;
         text-align: center;
-        font-size: 40px;
-        font-weight: 700;
+        @include font(40px, 700);
         line-height: 1.2;
         color: #101828;
 
@@ -429,8 +552,12 @@
         }
 
         @include devices(sm) {
-          font-size: 24px;
+          font-size: 22px;
           margin-bottom: 14px;
+        }
+
+        @include devices(xs) {
+          font-size: 18px;
         }
       }
 
@@ -449,6 +576,10 @@
         background: #f7f7f8;
         border-radius: 12px;
         overflow: hidden;
+
+        @include devices(xs) {
+          border-radius: 10px;
+        }
       }
 
       &__head {
@@ -462,6 +593,18 @@
         gap: 14px;
         cursor: pointer;
         text-align: left;
+
+        @include devices(md) {
+          padding: 18px;
+        }
+
+        @include devices(sm) {
+          padding: 14px;
+        }
+
+        @include devices(xs) {
+          border-radius: 10px;
+        }
       }
 
       &__item--green &__head {
@@ -482,24 +625,52 @@
         gap: 16px;
         min-width: 0;
 
+        @include devices(sm) {
+          gap: 10px;
+        }
+
         h3 {
           margin: 0 0 4px;
           @include font(#ffffff, 24px, 500);
           line-height: 1.2;
+
+          @include devices(md) {
+            font-size: 20px;
+          }
+
+          @include devices(sm) {
+            font-size: 18px;
+          }
+
+          @include devices(xs) {
+            font-size: 16px;
+          }
         }
 
         p {
           margin: 0;
           @include font(#ffffff, 16px, 400);
-          line-height: 1.2;
+          line-height: 1.4;
+
+          @include devices(sm) {
+            font-size: 14px;
+          }
         }
       }
 
-      i {
+      &__head-icon {
         flex: 0 0 auto;
         color: #ffffff;
         font-size: 30px;
         line-height: 1;
+
+        @include devices(sm) {
+          font-size: 24px;
+        }
+
+        @include devices(xs) {
+          font-size: 20px;
+        }
       }
 
       &__arrow {
@@ -508,6 +679,10 @@
         font-size: 16px;
         line-height: 1;
         transition: transform 0.3s ease;
+
+        @include devices(xs) {
+          font-size: 14px;
+        }
       }
 
       &__item:not(.is-open) &__arrow {
@@ -515,9 +690,19 @@
       }
 
       &__body {
+		border-radius: 12px;
         padding: 14px;
         display: grid;
         gap: 12px;
+
+        @include devices(sm) {
+          padding: 12px;
+          gap: 10px;
+        }
+
+        @include devices(xs) {
+          padding: 10px;
+        }
       }
 
       &__item:not(.is-open) &__body {
@@ -534,65 +719,40 @@
         align-items: start;
         gap: 12px;
 
+        @include devices(xs) {
+          grid-template-columns: 1fr;
+          gap: 8px;
+        }
+
         p {
           margin: 0;
           @include font(#334155, 16px, 400);
-          line-height: 1.45;
+          line-height: 1.5;
+
+          @include devices(sm) {
+            font-size: 14px;
+          }
         }
       }
 
       &__time {
         min-width: 62px;
         padding: 6px 8px;
-        border-radius: 	6px;
+        border-radius: 6px;
         background: #eaf0f7;
         color: #5a87c4;
-        font-size: 11px;
+        font-size: 12px;
         font-weight: 700;
-        line-height: 1.25;
+        line-height: 1.3;
         text-align: center;
         white-space: nowrap;
-      }
 
-      @include devices(sm) {
-        &__head {
-          padding: 12px 14px;
-        }
-
-        &__head-left {
-          gap: 10px;
-
-          h3 {
-            font-size: 16px;
-          }
-
-          p {
-            font-size: 11px;
-          }
-        }
-
-        &__head-icon {
-          font-size: 24px;
-        }
-
-        &__body {
-          padding: 12px;
-          gap: 10px;
-        }
-
-        &__card {
-          padding: 10px;
-          gap: 10px;
-
-          p {
-            font-size: 13px;
-          }
-        }
-
-        &__time {
+        @include devices(sm) {
           min-width: 58px;
-          font-size: 10px;
-          padding: 5px 6px;
+        }
+
+        @include devices(xs) {
+          font-size: 14px;
         }
       }
     }
@@ -602,36 +762,60 @@
       border-radius: 12px;
       background-color: #ffffff;
       margin-bottom: 60px;
+
+      @include devices(md) {
+        padding: 20px;
+        margin-bottom: 40px;
+      }
+
+      @include devices(xs) {
+        padding: 16px;
+        border-radius: 10px;
+      }
+
       &-text {
         text-align: center;
         margin-bottom: 24px;
+
         h3 {
-          @include font(30px, 500);
-          color: #0f172a;
           margin-bottom: 8px;
         }
-        p {
-          @include font(18px, 400);
-          color: #475569;
-        }
       }
+
       &-card {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
-        gap: 27px;
+        gap: 20px;
+
+        @include devices(xl) {
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include devices(md) {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include devices(xs) {
+          grid-template-columns: 1fr;
+          gap: 14px;
+        }
 
         &-colors1 {
           background-color: #48a6a71a;
         }
+
         &-colors2 {
           background-color: #84cc161a;
         }
+
         &-colors3 {
           background-color: #f59e0b1a;
         }
+
         &-colors4 {
           background-color: #f973161a;
         }
+
         &-colors5 {
           background-color: #dc26261a;
         }
@@ -644,17 +828,52 @@
           justify-content: center;
           flex-direction: column;
           text-align: center;
+
+          @include devices(xs) {
+            border-radius: 10px;
+          }
+
           img {
             margin-bottom: 12px;
+            max-width: 64px;
+            height: auto;
+
+            @include devices(sm) {
+              max-width: 56px;
+            }
           }
+
           h5 {
             @include font(24px, 500);
             color: #0f172a;
             margin-bottom: 8px;
+            line-height: 1.2;
+
+            @include devices(md) {
+              font-size: 20px;
+            }
+
+            @include devices(sm) {
+              font-size: 18px;
+            }
+
+            @include devices(xs) {
+              font-size: 16px;
+            }
           }
+
           p {
             @include font(18px, 400);
             color: #334155;
+            line-height: 1.5;
+
+            @include devices(md) {
+              font-size: 16px;
+            }
+
+            @include devices(xs) {
+              font-size: 14px;
+            }
           }
         }
       }

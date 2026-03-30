@@ -1,7 +1,7 @@
 .about {
   &-section {
     background: var(--neutral1000);
-    padding: 100px 0px;
+    padding: 80px 0px; // reduced padding for better mobile fit
     background-image: url("../../images/about-img-5.png");
     background-repeat: no-repeat;
     background-position: left 0px top 180px;
@@ -9,10 +9,13 @@
       display: flex;
       justify-content: space-between;
       gap: 45px;
+      flex-wrap: wrap; // allow items to wrap on small screens
     }
     &-text {
       display: flex;
       flex-direction: column;
+      width: 100%;
+      max-width: 760px; // keep content readable on large screens
       a {
         @include font(var(--card700), 16px, 400, 1.5);
         line-height: 24px;
@@ -32,17 +35,17 @@
       h3 {
         @include font(var(--neutral900), 30px, 500, 1.5);
         line-height: 38px;
-        letter-spacing: 0%;
         margin-bottom: 16px;
       }
       p {
         @include font(var(--neutral600), 18px, 400, 1.5);
         margin-bottom: 12px;
-        width: 851px;
+        max-width: 100%; // remove fixed width
+        width: 100%;
       }
       &-btn {
         width: 230px;
-        position: relative;                   
+        position: relative;
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -70,6 +73,16 @@
           background: #122e71;
           z-index: -1;
         }
+
+        @include devices(md) {
+          width: 200px;
+        }
+
+        @include devices(sm) {
+          width: 100%;
+          max-width: 320px;
+          margin: 0 auto;
+        }
       }
     }
     &-right {
@@ -86,7 +99,7 @@
 
       @include devices(sm) {
         grid-template-columns: 1fr;
-        max-width: 360px;
+        max-width: 100%;
         margin: 0 auto;
       }
 
@@ -110,25 +123,22 @@
         }
 
         &--big {
-          width: 368px;
+          width: 100%;
           height: 330px;
 
           @include devices(md) {
             height: 220px;
           }
-
           @include devices(sm) {
-            height: 240px;
+            height: 220px;
           }
         }
 
         &--banner {
           height: 113px;
-
           @include devices(md) {
             height: 76px;
           }
-
           @include devices(sm) {
             height: 90px;
           }
@@ -149,20 +159,10 @@
             animation: spin 6s linear infinite;
           }
 
-          @keyframes spin {
-            from {
-              transform: rotate(0deg);
-            }
-            to {
-              transform: rotate(360deg);
-            }
-          }
-
           @include devices(md) {
             height: 150px;
             padding: 20px 28px;
           }
-
           @include devices(sm) {
             height: 170px;
           }
@@ -170,11 +170,9 @@
 
         &--small {
           height: 220px;
-
           @include devices(md) {
             height: 150px;
           }
-
           @include devices(sm) {
             height: 220px;
           }
@@ -189,59 +187,304 @@
       align-items: center;
       justify-content: space-between;
       gap: 16px;
-      padding: 106px 0px 16px 0px;
+      padding: 106px 0 16px 0;
       background-image: url("../../images/about-page-backrund.svg");
       background-repeat: no-repeat;
       background-position: center;
+      background-size: cover;
+      min-width: 0;
+
+      @include devices(xl) {
+        padding: 90px 0 16px 0;
+      }
+
+      @include devices(lg) {
+        gap: 20px;
+        padding: 70px 0 16px 0;
+      }
+
+      @include devices(md) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 50px 0 16px 0;
+        text-align: center;
+      }
+
+      @include devices(sm) {
+        gap: 14px;
+        padding: 40px 0 16px 0;
+        background-size: contain;
+      }
+
+      @include devices(xs) {
+        padding: 30px 0 12px 0;
+      }
+
+      > img {
+        width: 100%;
+        max-width: 360px;
+        height: auto;
+        object-fit: cover;
+        border-radius: 12px;
+        flex-shrink: 1;
+
+        @include devices(xl) {
+          max-width: 300px;
+        }
+
+        @include devices(lg) {
+          max-width: 240px;
+        }
+
+        @include devices(md) {
+          max-width: 100%;
+        }
+
+        @include devices(xs) {
+          border-radius: 10px;
+        }
+      }
+
       &-main {
         display: flex;
         flex-direction: column;
+        min-width: 0;
+        flex: 1;
+        width: 100%;
+
+        @include devices(md) {
+          width: 100%;
+        }
       }
+
       &-text {
         width: 749px;
+        max-width: 100%;
         display: flex;
         flex-direction: column;
         gap: 16px;
         text-align: center;
         margin-bottom: 70px;
+        margin-left: auto;
+        margin-right: auto;
+
+        @include devices(xl) {
+          margin-bottom: 50px;
+        }
+
+        @include devices(lg) {
+          width: 100%;
+          margin-bottom: 36px;
+        }
+
+        @include devices(md) {
+          margin-bottom: 28px;
+        }
+
+        @include devices(sm) {
+          gap: 12px;
+          margin-bottom: 20px;
+        }
+
         h3 {
           @include font(var(--neutral800), 30px, 500);
           margin-bottom: 16px;
+          line-height: 1.25;
+
+          @include devices(xl) {
+            font-size: 28px;
+          }
+
+          @include devices(lg) {
+            font-size: 26px;
+            margin-bottom: 12px;
+          }
+
+          @include devices(md) {
+            font-size: 24px;
+          }
+
+          @include devices(sm) {
+            font-size: 22px;
+            margin-bottom: 8px;
+          }
+
+          @include devices(xs) {
+            font-size: 20px;
+            line-height: 28px;
+          }
+        }
+
+        p {
+          @include font(var(--neutral700), 18px, 400);
+          line-height: 28px;
+          margin: 0;
+
+          @include devices(xl) {
+            font-size: 17px;
+            line-height: 26px;
+          }
+
+          @include devices(lg) {
+            font-size: 16px;
+            line-height: 25px;
+          }
+
+          @include devices(md) {
+            font-size: 16px;
+            line-height: 24px;
+          }
+
+          @include devices(sm) {
+            font-size: 15px;
+            line-height: 23px;
+          }
+
+          @include devices(xs) {
+            font-size: 14px;
+            line-height: 22px;
+          }
         }
       }
+
       &-link {
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 16px;
+        flex-wrap: wrap;
+
+        @include devices(lg) {
+          gap: 12px;
+        }
+
+        @include devices(md) {
+          width: 100%;
+          justify-content: center;
+        }
+
+        @include devices(sm) {
+          flex-direction: column;
+        }
+
+        @include devices(xs) {
+          gap: 10px;
+        }
+
+        img {
+          width: calc(50% - 8px);
+          max-width: 280px;
+          height: auto;
+          border-radius: 12px;
+          object-fit: cover;
+          display: block;
+
+          @include devices(lg) {
+            width: calc(50% - 6px);
+          }
+
+          @include devices(md) {
+            width: calc(50% - 8px);
+            max-width: 100%;
+          }
+
+          @include devices(sm) {
+            width: 100%;
+          }
+
+          @include devices(xs) {
+            border-radius: 10px;
+          }
+        }
       }
+
       &-logo {
         padding: 107px 52px;
         background-color: var(--card400);
         border-radius: 12px;
         width: 368px;
+        min-width: 368px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+
+        @include devices(xl) {
+          width: 310px;
+          min-width: 310px;
+          padding: 85px 40px;
+        }
+
+        @include devices(lg) {
+          width: 250px;
+          min-width: 250px;
+          padding: 60px 28px;
+        }
+
+        @include devices(md) {
+          width: 100%;
+          min-width: 100%;
+          max-width: 420px;
+          padding: 50px 30px;
+        }
+
+        @include devices(sm) {
+          max-width: 100%;
+          padding: 36px 24px;
+        }
+
+        @include devices(xs) {
+          padding: 28px 18px;
+          border-radius: 10px;
+        }
+
         img {
           width: 100%;
           height: 100%;
           object-fit: contain;
           animation: spin 6s linear infinite;
+
+          @include devices(sm) {
+            max-width: 220px;
+          }
+
+          @include devices(xs) {
+            max-width: 180px;
+          }
         }
 
         @keyframes spin {
           from {
             transform: rotate(0deg);
           }
+
           to {
             transform: rotate(360deg);
           }
         }
       }
     }
+
     &-content {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 16px;
       margin-bottom: 60px;
+
+      @include devices(lg) {
+        margin-bottom: 40px;
+      }
+
+      @include devices(md) {
+        grid-template-columns: 1fr;
+      }
+
+      @include devices(sm) {
+        gap: 14px;
+        margin-bottom: 30px;
+      }
+
       &-card {
         padding: 24px;
         border-radius: 12px;
@@ -249,6 +492,25 @@
         background-image: url("../../images/eye.svg");
         background-repeat: no-repeat;
         background-position: right top 32px;
+        min-width: 0;
+
+        @include devices(lg) {
+          padding: 20px;
+          background-size: 90px;
+        }
+
+        @include devices(sm) {
+          padding: 18px;
+          background-position: right top 20px;
+          background-size: 72px;
+        }
+
+        @include devices(xs) {
+          padding: 16px;
+          border-radius: 10px;
+          background-size: 58px;
+        }
+
         h4 {
           display: flex;
           align-items: center;
@@ -256,6 +518,36 @@
           @include font(var(--white), 30px, 500);
           line-height: 38px;
           margin-bottom: 16px;
+
+          @include devices(xl) {
+            font-size: 26px;
+            line-height: 34px;
+          }
+
+          @include devices(lg) {
+            font-size: 24px;
+            line-height: 32px;
+            gap: 12px;
+          }
+
+          @include devices(md) {
+            font-size: 22px;
+            line-height: 30px;
+          }
+
+          @include devices(sm) {
+            font-size: 20px;
+            line-height: 28px;
+            gap: 10px;
+            margin-bottom: 12px;
+            align-items: flex-start;
+          }
+
+          @include devices(xs) {
+            font-size: 18px;
+            line-height: 26px;
+          }
+
           i {
             font-size: 32px;
             padding: 10px;
@@ -263,13 +555,58 @@
             background-color: #ffffff1a;
             display: flex;
             justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+
+            @include devices(xl) {
+              font-size: 28px;
+            }
+
+            @include devices(sm) {
+              font-size: 22px;
+              padding: 8px;
+              border-radius: 10px;
+            }
+
+            @include devices(xs) {
+              font-size: 20px;
+              padding: 7px;
+            }
           }
         }
+
         p {
           @include font(var(--white), 18px, 400);
           line-height: 28px;
+          margin: 0;
+
+          @include devices(xl) {
+            font-size: 17px;
+            line-height: 26px;
+          }
+
+          @include devices(lg) {
+            font-size: 16px;
+            line-height: 25px;
+          }
+
+          @include devices(md) {
+            font-size: 16px;
+            line-height: 24px;
+          }
+
+          @include devices(sm) {
+            font-size: 15px;
+            line-height: 23px;
+          }
+
+          @include devices(xs) {
+            font-size: 14px;
+            line-height: 22px;
+          }
         }
       }
+
       &-card2 {
         padding: 24px;
         border-radius: 12px;
@@ -277,6 +614,25 @@
         background-image: url("../../images/gps.png");
         background-repeat: no-repeat;
         background-position: right top 32px;
+        min-width: 0;
+
+        @include devices(lg) {
+          padding: 20px;
+          background-size: 90px;
+        }
+
+        @include devices(sm) {
+          padding: 18px;
+          background-position: right top 20px;
+          background-size: 72px;
+        }
+
+        @include devices(xs) {
+          padding: 16px;
+          border-radius: 10px;
+          background-size: 58px;
+        }
+
         h4 {
           display: flex;
           align-items: center;
@@ -284,6 +640,36 @@
           @include font(var(--white), 30px, 500);
           line-height: 38px;
           margin-bottom: 16px;
+
+          @include devices(xl) {
+            font-size: 26px;
+            line-height: 34px;
+          }
+
+          @include devices(lg) {
+            font-size: 24px;
+            line-height: 32px;
+            gap: 12px;
+          }
+
+          @include devices(md) {
+            font-size: 22px;
+            line-height: 30px;
+          }
+
+          @include devices(sm) {
+            font-size: 20px;
+            line-height: 28px;
+            gap: 10px;
+            margin-bottom: 12px;
+            align-items: flex-start;
+          }
+
+          @include devices(xs) {
+            font-size: 18px;
+            line-height: 26px;
+          }
+
           i {
             font-size: 32px;
             padding: 10px;
@@ -291,31 +677,138 @@
             background-color: #ffffff1a;
             display: flex;
             justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+
+            @include devices(xl) {
+              font-size: 28px;
+            }
+
+            @include devices(sm) {
+              font-size: 22px;
+              padding: 8px;
+              border-radius: 10px;
+            }
+
+            @include devices(xs) {
+              font-size: 20px;
+              padding: 7px;
+            }
           }
         }
+
         p {
           @include font(var(--white), 18px, 400);
           line-height: 28px;
+          margin: 0;
+
+          @include devices(xl) {
+            font-size: 17px;
+            line-height: 26px;
+          }
+
+          @include devices(lg) {
+            font-size: 16px;
+            line-height: 25px;
+          }
+
+          @include devices(md) {
+            font-size: 16px;
+            line-height: 24px;
+          }
+
+          @include devices(sm) {
+            font-size: 15px;
+            line-height: 23px;
+          }
+
+          @include devices(xs) {
+            font-size: 14px;
+            line-height: 22px;
+          }
         }
       }
     }
+
     &-box {
       background-color: var(--white);
       padding: 24px;
       border-radius: 12px;
       text-align: center;
       box-shadow: 0px 1px 20px 0px #9494940d;
+
+      @include devices(lg) {
+        padding: 20px;
+      }
+
+      @include devices(sm) {
+        padding: 18px;
+      }
+
+      @include devices(xs) {
+        padding: 16px;
+        border-radius: 10px;
+      }
+
       h3 {
         @include font(30px, 500);
         color: #0f172a;
         line-height: 38px;
         margin-bottom: 24px;
+
+        @include devices(xl) {
+          font-size: 28px;
+          line-height: 36px;
+        }
+
+        @include devices(lg) {
+          font-size: 26px;
+          line-height: 34px;
+          margin-bottom: 20px;
+        }
+
+        @include devices(sm) {
+          font-size: 22px;
+          line-height: 30px;
+          margin-bottom: 16px;
+        }
+
+        @include devices(xs) {
+          font-size: 20px;
+          line-height: 28px;
+        }
       }
+
       &-image {
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 16px;
+        flex-wrap: wrap;
+
+        @include devices(md) {
+          justify-content: center;
+        }
+
+        @include devices(sm) {
+          flex-direction: column;
+        }
+
+        img {
+          width: calc(50% - 8px);
+          max-width: 100%;
+          height: auto;
+          object-fit: contain;
+          display: block;
+
+          @include devices(md) {
+            width: calc(50% - 8px);
+          }
+
+          @include devices(sm) {
+            width: 100%;
+          }
+        }
       }
     }
   }
