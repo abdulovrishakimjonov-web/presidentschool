@@ -1,254 +1,245 @@
 .content {
-    padding: 20px;
-    background: var(--white);
-    border-radius: 16px;
+  padding: 20px;
+  background: var(--white);
+  border-radius: 16px;
+
+  @include devices(md) {
+    padding: 16px;
+  }
+
+  @include devices(sm) {
+    padding: 12px;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
 
     @include devices(md) {
-        padding: 16px;
+      margin-bottom: 16px;
     }
 
     @include devices(sm) {
-        padding: 12px;
+      margin-bottom: 12px;
     }
+  }
 
-    &:not(:last-child) {
-        margin-bottom: 20px;
+  &.primary {
+    .content__text {
+      strong {
+        @include font(var(--primary), 24px, 600);
+        line-height: 28px;
+        letter-spacing: -0.02em;
+        margin-bottom: 16px;
 
         @include devices(md) {
-            margin-bottom: 16px;
+          font-size: 20px;
+          line-height: 24px;
         }
 
         @include devices(sm) {
-            margin-bottom: 12px;
+          font-size: 18px;
+          line-height: 20px;
         }
+      }
 
+      & ~ .carousel:not(:last-child) {
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  &__title {
+    @include font(var(--black), 24px, 600);
+    line-height: 28px;
+    letter-spacing: -0.02em;
+    margin-bottom: 10px;
+
+    @include devices(md) {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    @include devices(sm) {
+      font-size: 18px;
+      line-height: 20px;
     }
 
     &.primary {
-        .content__text {
-            strong {
-                @include font(var(--primary), 24px, 600);
-                line-height: 28px;
-                letter-spacing: -0.02em;
-                margin-bottom: 16px;
+      color: var(--primary);
+      margin-bottom: 16px;
 
-                @include devices(md) {
-                    font-size: 20px;
-                    line-height: 24px;
-                }
+      & ~ .carousel:not(:last-child) {
+        margin-bottom: 40px;
+      }
+    }
+  }
 
-                @include devices(sm) {
-                    font-size: 18px;
-                    line-height: 20px;
-                }
-            }
+  &__text {
+    @include font(var(--neutral500), 16px, 400);
+    line-height: 28px;
 
-            & ~ .carousel:not(:last-child) {
-                margin-bottom: 40px;
-            }
-        }
-
-
+    @include devices(sm) {
+      font-size: 14px;
+      line-height: 22px;
     }
 
-    &__title {
-        @include font(var(--black), 24px, 600);
-        line-height: 28px;
-        letter-spacing: -0.02em;
-        margin-bottom: 10px;
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
 
-        @include devices(md) {
-            font-size: 20px;
-            line-height: 24px;
+    strong {
+      @include font(var(--black), 24px, 600);
+      line-height: 28px;
+      letter-spacing: -0.02em;
+      margin-bottom: 10px;
+
+      @include devices(md) {
+        font-size: 20px;
+      }
+
+      @include devices(sm) {
+        font-size: 18px;
+      }
+
+      @include devices(xs) {
+        font-size: 16px;
+      }
+    }
+
+    p {
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+    }
+
+    ul {
+      margin-left: 16px;
+
+      li {
+        list-style-type: disc;
+      }
+    }
+  }
+
+  &__grid {
+    display: grid;
+    gap: 16px;
+
+    &.gtc-2 {
+      grid-template-columns: repeat(2, 1fr);
+
+      @include devices(md) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    &.gtc-3 {
+      grid-template-columns: repeat(3, 1fr);
+
+      @include devices(md) {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      @include devices(xs) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    &.gtc-4 {
+      grid-template-columns: repeat(4, 1fr);
+
+      @include devices(md) {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      @include devices(xs) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    &.gtc-6 {
+      grid-template-columns: repeat(6, 1fr);
+    }
+
+    &--item {
+      display: flex;
+      overflow: hidden;
+      position: relative;
+      height: 210px;
+      border-radius: 12px;
+      justify-content: flex-start;
+      align-items: flex-end;
+      padding: 16px;
+      transition: all 0.3s ease;
+
+      * {
+        transition: all 0.3s ease;
+      }
+
+      &.video-card {
+        &:before {
+          content: "";
+          background: url("@/images/play.svg") no-repeat center center;
+          position: absolute;
+          width: 50px;
+          height: 50px;
+          transform: translate(-50%, -50%);
+          top: 50%;
+          left: 50%;
+          z-index: 2;
+        }
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0) 31.25%,
+          rgba(0, 0, 0, 0.9) 100%
+        );
+        z-index: 1;
+      }
+
+      &-img {
+        width: 100%;
+        inset: 0;
+        position: absolute;
+        z-index: 0;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+
+      &-content {
+        position: relative;
+        z-index: 2;
+
+        &-title {
+          @include font(var(--white), 16px, 600);
         }
 
-        @include devices(sm) {
+        &-date {
+          @include font(var(--white), 14px, 400);
+          line-height: 24px;
+          margin-top: 4px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 4px;
+
+          i {
             font-size: 18px;
-            line-height: 20px;
+          }
         }
-
-        &.primary {
-            color: var(--primary);
-            margin-bottom: 16px;
-
-            & ~ .carousel:not(:last-child) {
-                margin-bottom: 40px;
-            }
-        }
+      }
     }
-
-    &__text {
-        @include font(#475467, 16px, 400);
-        line-height: 28px;
-
-        @include devices(sm) {
-            font-size: 14px;
-            line-height: 22px;
-        }
-
-
-        &:not(:last-child) {
-            margin-bottom: 16px;
-        }
-
-        strong {
-            @include font(var(--black), 24px, 600);
-            line-height: 28px;
-            letter-spacing: -0.02em;
-            margin-bottom: 10px;
-
-            @include devices(md) {
-                font-size: 20px;
-            }
-
-            @include devices(sm) {
-                font-size: 18px;
-
-            }
-
-            @include devices(xs) {
-                font-size: 16px;
-
-            }
-        }
-
-        p {
-            &:not(:last-child) {
-                margin-bottom: 16px;
-            }
-        }
-
-        ul {
-            margin-left: 16px;
-
-            li {
-                list-style-type: disc;
-            }
-        }
-    }
-
-    &__grid {
-        display: grid;
-        gap: 16px;
-
-        &.gtc-2 {
-            grid-template-columns: repeat(2, 1fr);
-
-            @include devices(md) {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        &.gtc-3 {
-            grid-template-columns: repeat(3, 1fr);
-
-            @include devices(md) {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            @include devices(xs) {
-                grid-template-columns: 1fr;
-            }
-
-        }
-
-        &.gtc-4 {
-            grid-template-columns: repeat(4, 1fr);
-
-            @include devices(md) {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            @include devices(xs) {
-                grid-template-columns: 1fr;
-            }
-        }
-
-
-
-        &.gtc-6 {
-            grid-template-columns: repeat(6, 1fr);
-        }
-
-
-        &--item {
-            display: flex;
-            overflow: hidden;
-            position: relative;
-            height: 210px;
-            border-radius: 12px;
-            justify-content: flex-start;
-            align-items: flex-end;
-            padding: 16px;
-            transition: all 0.3s ease;
-
-            * {
-                transition: all 0.3s ease;
-
-            }
-
-            &.video-card {
-                &:before {
-                    content: '';
-                    background: url("../images/play.svg") no-repeat center center;
-                    position: absolute;
-                    width: 50px;
-                    height: 50px;
-                    transform: translate(-50%, -50%);
-                    top: 50%;
-                    left: 50%;
-                    z-index: 2;
-                }
-            }
-
-            &::after {
-                content: '';
-                position: absolute;
-                inset: 0;
-                width: 100%;
-                height: 100%;
-                background: linear-gradient(180deg, rgba(0, 0, 0, 0) 31.25%, rgba(0, 0, 0, 0.9) 100%);
-                z-index: 1;
-            }
-
-            &-img {
-
-                width: 100%;
-                inset: 0;
-                position: absolute;
-                z-index: 0;
-
-                img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    object-position: center;
-                }
-            }
-
-            &-content {
-                position: relative;
-                z-index: 2;
-
-                &-title {
-                    @include font(var(--white), 16px, 600);
-                }
-
-                &-date {
-                    @include font(var(--white), 14px, 400);
-                    line-height: 24px;
-                    margin-top: 4px;
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    gap: 4px;
-
-
-                    i {
-                        font-size: 18px;
-                    }
-                }
-            }
-        }
-    }
+  }
 }

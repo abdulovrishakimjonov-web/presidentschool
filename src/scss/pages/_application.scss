@@ -3,7 +3,7 @@
   h3 {
     @include font(30px, 500);
     line-height: 38px;
-    color: #0f172a;
+    color: var(--neutral800);
     margin-bottom: 45px;
     text-align: center;
   }
@@ -21,11 +21,28 @@
   &-wrapper {
     position: relative;
     top: -20px;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     align-items: center;
     justify-content: space-between;
     gap: 16px;
     margin-bottom: 32px;
+    margin: 0 auto;
+
+    @include devices(xl) {
+      grid-template-columns: repeat(3, 1fr);
+      justify-content: center;
+    }
+
+    @include devices(lg) {
+      grid-template-columns: repeat(2, 1fr);
+      margin-bottom: 20px;
+    }
+
+    @include devices(md) {
+      grid-template-columns: repeat(1, 1fr);
+      justify-content: center;
+    }
 
     &-card {
       display: flex;
@@ -45,7 +62,7 @@
 
         i {
           font-size: 34px;
-          color: #2a407a;
+          color: var(--card700);
           padding: 10px;
           border-radius: 8px;
           background-color: #2a407a1a;
@@ -54,12 +71,12 @@
         h5 {
           @include font(20px, 400);
           line-height: 30px;
-          color: #1e293b;
+          color: var(--neutral700);
           padding: 16px 0px 8px 0px;
         }
         p {
           @include font(18px, 400);
-          color: #475569;
+          color: var(--neutral500);
           line-height: 28px;
         }
       }
@@ -78,7 +95,7 @@
       border: 1px solid rgba(255, 255, 255, 0.14);
       border-radius: 12px;
       background: linear-gradient(180deg, #0d2460 0%, #2a407a 100%);
-      color: #ffffff;
+      color: var(--white);
       font-size: 18px;
       font-weight: 400;
       cursor: pointer;
@@ -101,7 +118,6 @@
     }
   }
 
-  // Responsive: stack cards and make button fluid
   @include devices(md) {
     h3 {
       @include font(26px, 500);
@@ -113,6 +129,7 @@
       top: 0;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
       gap: 18px;
       margin-bottom: 24px;
 
@@ -145,6 +162,7 @@
 
     &-wrapper {
       gap: 12px;
+      justify-content: center;
 
       &-card &-cards {
         border-radius: 12px;

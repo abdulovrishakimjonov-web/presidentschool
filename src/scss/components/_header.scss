@@ -7,14 +7,30 @@
   height: var(--height-header);
   width: 100%;
   position: fixed;
-  height: 150px;
+  height: 145px;
+   backdrop-filter: blur(10px);
+
+  @include devices(lg) {
+    height: 140px;
+  }
 
   @include devices(md) {
-    height: 120px;
+    height: 128px;
   }
 
   @include devices(sm) {
-    height: 100px;
+    height: 120px;
+  }
+
+  &-modal {
+    display: none;
+    @include devices(sm) {
+      position: relative;
+      display: block;
+      display: inline;
+      left: 90%;
+      top: -38px;
+    }
   }
 
   *,
@@ -28,6 +44,8 @@
     * {
       color: var(--white) !important;
     }
+	
+
 
     .button {
       background: var(--emerald50);
@@ -47,34 +65,19 @@
     transform: translate(-50%);
     padding: 8px;
 
-    @include devices(md) {
-      margin-bottom: 6px;
-      padding: 6px;
-      top: 4%;
-      transform: translate(-50%, 0);
-
-      img {
-        max-height: 72px;
-        height: auto;
-      }
-    }
-
     @include devices(sm) {
-      margin-bottom: 0;
-      left: 16px;
-      top: 8px;
-      transform: none;
-      padding: 4px;
-
-      img {
-        max-height: 56px;
-        height: auto;
-      }
+      width: 110px;
     }
   }
 
   &-top {
     background: var(--card500);
+
+    @include devices(md) {
+      height: 70px;
+      padding: 14px 0px 0px 0px;
+    }
+
     .container {
       display: flex;
       align-items: center;
@@ -84,6 +87,11 @@
       padding: 16px 0px;
       display: flex;
       gap: 32px;
+
+      @include devices(md) {
+        gap: 10px;
+      }
+
       a {
         background-color: #ffffff1a;
         padding: 6px;
@@ -93,19 +101,38 @@
         gap: 8px;
         @include font(16px, 400);
         color: var(--white);
+
         i {
           color: var(--white);
           font-size: 20px;
+        }
+
+        span {
+          display: inline-block; 
+        }
+
+        @include devices(md) {
+          padding: 5px;
+          font-size: 14px;
+		  span {
+            display: none;
+          }
+          i {
+            font-size: 18px;
+          }
+        }
+
+        @include devices(sm) {
+          
+          i {
+            font-size: 17px; 
+          }
         }
       }
 
       @include devices(md) {
         padding: 12px 0;
         gap: 20px;
-
-        a {
-          padding: 5px;
-        }
       }
     }
     &-left {
@@ -117,6 +144,10 @@
         display: flex;
         align-items: center;
         gap: 16px;
+
+        @include devices(sm) {
+          gap: 8px;
+        }
         a {
           background-color: #ffffff1a;
           padding: 4px;
@@ -127,6 +158,12 @@
           i {
             font-size: 24px;
             color: var(--white);
+          }
+
+          @include devices(md) {
+            i {
+              font-size: 18px;
+            }
           }
         }
       }
@@ -172,39 +209,52 @@
         }
       }
     }
-
-    @include devices(sm) {
-      display: none; // hide the top info bar on small screens to save space
-    }
   }
 
   &-text {
     padding: 27px 0px;
     background-color: #ffffff1a;
-    backdrop-filter: blur(10px);
+    @include devices(md) {
+	 
+	}
+
+    &-btn {
+      display: none;
+      @include devices(sm) {
+        display: block;
+      }
+
+	  button {
+		border-radius: 4px;
+		background-color: #0D2460;
+		color: var(--white);
+		border: none;
+	  }
+    }
+
     .container {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      gap: 250px;
+      flex-wrap: nowrap;
+      @include devices(lg) {
+        gap: 150px;
+      }
     }
     &-right {
       display: flex;
       align-items: center;
-      gap: 92px;
+      flex: 1;
+      justify-content: space-between;
+      @include devices(sm) {
+        display: none;
+      }
       a {
         font-weight: 400;
         font-size: 18px;
         color: var(--neutral900);
-      }
 
-      @include devices(md) {
-        gap: 48px;
-      }
-
-      @include devices(sm) {
-        gap: 16px;
-
-        a {
+        @include devices(lg) {
           font-size: 14px;
         }
       }
@@ -212,21 +262,18 @@
     &-left {
       display: flex;
       align-items: center;
-      gap: 68px;
+      flex: 1;
+      justify-content: space-between;
+
+      @include devices(sm) {
+        display: none;
+      }
       a {
         font-weight: 400;
         font-size: 18px;
         color: var(--neutral900);
-      }
 
-      @include devices(md) {
-        gap: 40px;
-      }
-
-      @include devices(sm) {
-        gap: 12px;
-
-        a {
+        @include devices(lg) {
           font-size: 14px;
         }
       }
@@ -509,16 +556,21 @@
     display: inline-block;
     vertical-align: middle;
 
+    @include devices(sm) {
+      display: none;
+    }
+
     .header-top-lang-toggle {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 6px 8px;
+      padding: 8px 7px;
       background: transparent;
       border: 0;
       color: var(--white);
       cursor: pointer;
-      border-radius: 8px;
+      border-radius: 6px;
+      background-color: #ffffff1a;
 
       img {
         width: 20px;
@@ -558,6 +610,7 @@
       margin: 0;
       z-index: 300;
       display: block;
+      color: var(--neutral800);
 
       &[hidden] {
         display: none;
@@ -585,164 +638,23 @@
         &:hover,
         &:focus {
           background: rgba(0, 0, 0, 0.04);
+          color: var(--neutral900);
         }
       }
     }
 
     @include devices(md) {
-      .header-top-lang-toggle {
-        padding: 5px;
+      &-logo {
+        margin-bottom: 6px;
+        padding: 6px;
+        top: 4%;
+        transform: translate(-50%, 0);
 
         img {
-          width: 18px;
-        }
-
-        .header-top-lang-label {
-          font-size: 13px;
+          max-height: 100px;
+          height: auto;
         }
       }
-
-      .header-top-lang-menu {
-        min-width: 120px;
-      }
-    }
-
-    @include devices(sm) {
-      .header-top-lang-toggle {
-        padding: 4px;
-
-        img {
-          width: 16px;
-        }
-
-        .header-top-lang-label {
-          display: none;
-        }
-
-        i {
-          font-size: 12px;
-        }
-      }
-    }
-  }
-
-  @include devices(md) {
-    &-logo {
-      margin-bottom: 6px;
-      padding: 6px;
-      top: 4%;
-      transform: translate(-50%, 0);
-
-      img {
-        max-height: 72px;
-        height: auto;
-      }
-    }
-
-    &-top {
-      .container {
-        gap: 12px;
-      }
-      &-right {
-        padding: 12px 0;
-        gap: 20px;
-        a {
-          padding: 5px;
-        }
-      }
-      &-left {
-        gap: 20px;
-        &-link p {
-          font-size: 14px;
-        }
-      }
-    }
-
-    &-text {
-      padding: 18px 0px;
-
-      &-right {
-        gap: 48px;
-      }
-      &-left {
-        gap: 40px;
-      }
-    }
-
-    &__menu {
-      gap: 12px;
-    }
-    &__test {
-      padding: 6px 8px;
-    }
-    &__burger {
-      display: inline-block;
-    }
-  }
-
-  @include devices(sm) {
-    position: fixed;
-    height: 100px;
-
-    &-logo {
-      margin-bottom: 0;
-      left: 16px;
-      top: 8px;
-      transform: none;
-      padding: 4px;
-
-      img {
-        max-height: 56px;
-        height: auto;
-      }
-    }
-
-    &-top {
-      display: none;
-    }
-
-    &-text {
-      padding: 10px 0px;
-      background-color: transparent;
-
-      .container {
-        flex-direction: row;
-        align-items: center;
-      }
-
-      &-right {
-        gap: 16px;
-        a {
-          font-size: 14px;
-        }
-      }
-      &-left {
-        gap: 12px;
-        a {
-          font-size: 14px;
-        }
-      }
-    }
-
-    &__menu {
-      display: none;
-    }
-
-    &__burger {
-      display: inline-block;
-      width: 24px;
-      height: 2px;
-
-      &::before,
-      &::after {
-        width: 20px;
-      }
-    }
-  }
-
-  @include devices(sm) {
-    &-text {
-      display: none;
     }
   }
 }

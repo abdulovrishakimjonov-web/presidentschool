@@ -1,111 +1,111 @@
 .breadcrumbs {
-    margin-bottom: 20px;
-    position: relative;
-    overflow: hidden;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
 
-    background-image: url("../../images/breadcrumb-img.png");
+  background-image: url("@/images/breadcrumb-img.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 50% 100%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("@/images/breadcrumb-img-2.png");
     background-repeat: no-repeat;
-    background-position: right center;
-    background-size: 50% 100%;
+    background-position: left center;
+    background-size: 100% 100%;
+    z-index: 0;
+    pointer-events: none;
+  }
 
-    &::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background-image: url("../../images/breadcrumb-img-2.png");
-        background-repeat: no-repeat;
-        background-position: left center;
-        background-size: 100% 100%;
-        z-index: 0;
-        pointer-events: none;
+  @include devices(md) {
+    margin-bottom: 16px;
+  }
+
+  @include devices(sm) {
+    margin-bottom: 12px;
+  }
+
+  .container {
+    margin-top: calc(var(--height-header) + 90px);
+    position: relative;
+    z-index: 2;
+  }
+
+  &-wrapper {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    position: relative;
+    top: -50px;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 24px;
+
+    .i-home {
+      opacity: 1;
+      font-size: 24px !important;
+
+      &:hover {
+        text-decoration: none;
+      }
     }
 
+    &--item {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      i {
+        font-size: 12px;
+        color: var(--white);
+      }
+    }
+  }
+
+  &__link {
+    @include font(var(--white), 16px, 400);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
     @include devices(md) {
-        margin-bottom: 16px;
+      font-size: 16px;
     }
 
     @include devices(sm) {
-        margin-bottom: 12px;
+      font-size: 14px;
     }
 
-    .container {
-        margin-top: calc(var(--height-header) + 90px);
-        position: relative;
-        z-index: 2;
+    &.active {
+      pointer-events: none;
+      cursor: default;
     }
 
-    &-wrapper {
-        display: flex;
-        align-items: start;
-        flex-direction: column;
-        position: relative;
-        top: -50px;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__title {
+    @include font(var(--white), 40px, 500);
+    position: relative;
+    z-index: 2;
+
+    @include devices(lg) {
+      font-size: 24px;
     }
 
-    &__list {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        position: relative;
-        z-index: 2;
-        margin-bottom: 24px;
-
-        .i-home {
-            opacity: 1;
-            font-size: 24px !important;
-
-            &:hover {
-                text-decoration: none;
-            }
-        }
-
-        &--item {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-
-            i {
-                font-size: 12px;
-                color: #fff;
-            }
-        }
+    @include devices(md) {
+      font-size: 22px;
     }
-
-    &__link {
-        @include font(var(--white), 16px, 400);
-        display: flex;
-        align-items: center;
-       gap: 6px;
-
-        @include devices(md) {
-            font-size: 16px;
-        }
-
-        @include devices(sm) {
-            font-size: 14px;
-        }
-
-        &.active {
-            pointer-events: none;
-            cursor: default;
-        }
-
-        &:hover {
-            text-decoration: underline;
-        }
-    }
-
-    &__title {
-        @include font(var(--white), 40px, 500);
-        position: relative;
-        z-index: 2;
-
-        @include devices(lg) {
-            font-size: 24px;
-        }
-
-        @include devices(md) {
-            font-size: 22px;
-        }
-    }
+  }
 }

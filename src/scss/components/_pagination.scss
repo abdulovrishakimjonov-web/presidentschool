@@ -16,7 +16,7 @@
       align-items: center;
       min-width: 44px;
       height: 44px;
-      background: #fff;
+      background: var(--white);
       border-radius: 12px;
       transition: all 0.2s ease;
       border: 1px solid transparent;
@@ -26,7 +26,7 @@
 
       i {
         font-size: 20px;
-        color: #292d32;
+        color: var(--neutral700);
       }
 
       @include devices(sm) {
@@ -35,12 +35,12 @@
       }
 
       &:hover {
-        border: 1px solid #cbd5e1;
+        border: 1px solid var(--neutral200);
       }
 
       &.active {
-        color: #ffffff;
-        background-color: #2a407a;
+        color: var(--white);
+        background-color: var(--card400);
         border: 1px solid #002266;
       }
     }

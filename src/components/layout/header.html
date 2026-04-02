@@ -2,44 +2,51 @@
 	<div class="header-top">
 		<div class="container">
 			<div class="header-top-right">
-				<a href="#"><i class="i-phone"></i>+998 (90) 123 45 67</a>
-				<a href="#"><i class="i-mail"></i>+998 (90) 123 45 67</a>
+				<a href="#">
+					<i class="i-phone"></i>
+					<span>+998 (90) 123 45 67</span>
+				</a>
+				<a href="#">
+					<i class="i-mail"></i>
+					<span>+998 (90) 123 45 67</span>
+				</a>
 			</div>
+
 			<div class="header-top-left">
 				<div class="header-top-left-line">
-					<a href=""><i class="i-instagram"></i></a>
+					<a href=""><i class="i-Instagram"></i></a>
 					<a href=""><i class="i-youtube"></i></a>
 					<a href=""><i class="i-facebook"></i></a>
-					<a href=""><i class="i-telegram"></i></a>
+					<a href=""><i class="i-Telegram"></i></a>
 				</div>
-				<!-- language dropdown -->
 				<div class="header-top-lang">
 					<button class="header-top-lang-toggle" type="button" aria-haspopup="listbox" aria-expanded="false">
-						<img src="../../images/flag-uz.png" alt="uz">
+						<img src="@/images/flag-uz.png" alt="uz">
 						<span class="header-top-lang-label">uzb</span>
 						<i class="i-dropdawun"></i>
 					</button>
 					<ul class="header-top-lang-menu" role="listbox" hidden>
-						<li role="option" data-lang="uz" data-flag="../../images/flag-uz.png"> <img
-								src="../../images/flag-uz.png" alt="uz"> <span>uzb</span></li>
-						<li role="option" data-lang="ru" data-flag="../../images/flag-ru.png"> <img
-								src="../../images/flag-ru.png" alt="ru"> <span>ru</span></li>
-						<li role="option" data-lang="en" data-flag="../../images/flag-en.png"> <img
-								src="../../images/flag-en.png" alt="en"> <span>eng</span></li>
+						<li role="option" data-lang="uz" data-flag="@/images/flag-uz.png"> <img
+								src="@/images/flag-uz.png" alt="uz"> <span>uzb</span></li>
+						<li role="option" data-lang="ru" data-flag="@/images/flag-ru.png"> <img
+								src="@/images/flag-ru.png" alt="ru"> <span>ru</span></li>
+						<li role="option" data-lang="en" data-flag="@/images/flag-en.png"> <img
+								src="@/images/flag-en.png" alt="en"> <span>eng</span></li>
 					</ul>
 				</div>
-				<!-- end language dropdown -->
 			</div>
 
 		</div>
 	</div>
 	<a class="header-logo" href="/"><img src="@/images/logo.svg" alt=""></a>
-	<button class="header__menu-btn " hidden type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu"
-		aria-controls="offcanvasMenu" aria-expanded="false">
-		<span class="header__burger" aria-hidden="true"></span>
-	</button>
 	<div class="header-text">
 		<div class="container">
+			<div class="header-text-btn">
+				<button class="" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu"
+					aria-controls="offcanvasMenu" aria-expanded="false">
+					<i class="i-menu"></i>
+				</button>
+			</div>
 			<div class="header-text-right">
 				<a href="@/about.html">Biz haqimizda</a>
 				<a href="@/leadership.html">Rahbariyat</a>
@@ -54,7 +61,49 @@
 			</div>
 		</div>
 	</div>
+
+	<div class="header-modal">
+		<div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+			tabindex="-1">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title fs-5" id="exampleModalToggleLabel">Modal 1</h1>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						Show a second modal and hide this one with the button below.
+					</div>
+					<div class="modal-footer">
+						<button class="btn btn-primary" data-bs-target="#exampleModalToggle2"
+							data-bs-toggle="modal">search</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
+			tabindex="-1">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Modal 2</h1>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						Hide this modal and show the first with the button below.
+					</div>
+					<div class="modal-footer">
+						<button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back
+							to first</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<button class="btn btn-#0D2460" data-bs-target="#exampleModalToggle" data-bs-toggle="modal"><i class="i-search"></i>
+		</button>
+	</div>
 </header>
+
 
 <script>
 	(function () {

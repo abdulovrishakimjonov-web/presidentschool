@@ -59,6 +59,14 @@
       align-items: center;
       justify-content: space-between;
       gap: 32px;
+
+      @include devices(xl) {
+        flex-direction: column;
+      }
+
+      &-inner {
+        width: 100%;
+      }
     }
     &-content {
       display: grid;
@@ -66,12 +74,26 @@
       gap: 18px;
       width: 921px;
 
+      @include devices(xl) {
+        width: 100%;
+      }
+
       @include devices(md) {
-        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
       }
 
       @include devices(sm) {
-        grid-template-columns: 1fr;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @include devices(xs) {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
       }
 
       &-card {
@@ -117,17 +139,12 @@
         &::after {
           content: "";
           position: absolute;
-          right: 12px;
           bottom: 0;
-          width: 120px;
-          height: 120px;
-          display: block;
-          opacity: 0.08;
+          width: 152px;
+          height: 152px;
+          opacity: 0.9;
           background-repeat: no-repeat;
-          background-position: center;
-          background-size: contain;
-          z-index: 1;
-          pointer-events: none;
+          background-position: center top 60px;
         }
 
         &:nth-child(1) {
@@ -135,8 +152,7 @@
           background: var(--card950);
 
           &::after {
-            background-image: url("../images/education-img-1.svg");
-            right: 12px;
+            background-image: url("@/images/education-img-1.svg");
             bottom: 0;
           }
         }
@@ -146,8 +162,7 @@
           background: var(--card900);
 
           &::after {
-            background-image: url("../images/education-img-2.svg");
-            right: 18px;
+            background-image: url("@/images/education-img-2.svg");
             bottom: 8px;
           }
         }
@@ -157,9 +172,7 @@
           background: var(--card800);
 
           &::after {
-            background-image: url("../images/education-img-3.svg");
-            right: 16px;
-            bottom: 4px;
+            background-image: url("@/images/education-img-3.svg");
           }
         }
 
@@ -169,9 +182,7 @@
           min-height: 205px;
 
           &::after {
-            background-image: url("../images/education-img-4.svg");
-            right: 18px;
-            bottom: 0;
+            background-image: url("@/images/education-img-4.svg");
           }
         }
 
@@ -181,9 +192,7 @@
           min-height: 205px;
 
           &::after {
-            background-image: url("../images/education-img-1.svg");
-            right: 18px;
-            bottom: 0;
+            background-image: url("@/images/education-img-1.svg");
           }
         }
 
@@ -214,12 +223,29 @@
       }
     }
     &-wrapper {
-      width: 576px;
+      width: 100%;
       display: flex;
       flex-direction: column;
       padding: 24px;
       border-radius: 12px;
       background: linear-gradient(180deg, #335c92 0%, #11386b 100%);
+
+      //   @include devices(xl) {
+      // 	width: ;
+      //   }
+
+      //   @include devices(lg) {
+      // 	width: 1000px;
+      //   }
+
+      //     @include devices(md) {
+      // 	width: 850px;
+      //   }
+
+      //      @include devices(sm) {
+      // 	width: 100%;
+      //   }
+
       &-link {
         width: 22px;
         padding: 0px 25px;
@@ -265,31 +291,19 @@
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          padding: 8px 27px 14px 27px;
+          padding: 8px 27px;
           border: 1px solid rgba(255, 255, 255, 0.14);
           border-radius: 12px;
           background: #ffffff1a;
-          color: #ffffff;
+          color: var(--white);
           font-size: 18px;
           font-weight: 400;
+          border-bottom: 5px solid rgba(0, 0, 0, 0.2);
           cursor: pointer;
           z-index: 1;
           box-shadow:
             inset 0 1px 0 rgba(255, 255, 255, 0.08),
             0 6px 18px rgba(9, 24, 61, 0.24);
-
-          &::after {
-            content: "";
-            width: 98%;
-            position: absolute;
-            left: 3px;
-            right: 10px;
-            bottom: 0px;
-            height: 5px;
-            border-radius: 0 0 30px 30px;
-            background: #00000033;
-            z-index: -1;
-          }
 
           @include devices(md) {
             width: 200px;
@@ -311,7 +325,7 @@
     &-main2 {
       h3 {
         @include font(30px, 500);
-        color: #0f172a;
+        color: var(--neutral800);
         line-height: 1.3;
 
         @include devices(lg) {
@@ -333,7 +347,7 @@
 
       p {
         @include font(18px, 400);
-        color: #475569;
+        color: var(--neutral500);
         line-height: 1.6;
 
         @include devices(lg) {
@@ -387,7 +401,7 @@
     &-main2 {
       padding: 24px;
       border-radius: 12px;
-      background-color: #ffffff;
+      background-color: var(--white);
 
       @include devices(md) {
         padding: 20px;
@@ -503,53 +517,53 @@
       }
 
       &-img1 {
-        background-image: url("../../images/education-img-1.svg");
+        background-image: url("@/images/education-img-1.svg");
         background-color: #48a6a7;
       }
 
       &-img2 {
-        background-image: url("../../images/education-img-2.svg");
+        background-image: url("@/images/education-img-2.svg");
         background-color: #608bc1;
       }
 
       &-img3 {
-        background-image: url("../../images/education-img-3.svg");
+        background-image: url("@/images/education-img-3.svg");
         background-color: #155e95;
       }
 
       &-img4 {
-        background-image: url("../../images/education-img-4.svg");
+        background-image: url("@/images/education-img-4.svg");
         background-color: #2a407a;
       }
 
       &-img5 {
-        background-image: url("../../images/education-img-5.svg");
+        background-image: url("@/images/education-img-5.svg");
         background-color: #147e5c;
       }
 
       &-image1 {
-        background-image: url("../../images/education-img-11.svg");
+        background-image: url("@/images/education-img-11.svg");
         background-color: #48a6a7;
       }
 
       &-image2 {
-        background-image: url("../../images/education-img-12.svg");
+        background-image: url("@/images/education-img-12.svg");
         background-color: #2a407a;
       }
 
       &-image3 {
-        background-image: url("../../images/education-img-5.svg");
+        background-image: url("@/images/education-img-5.svg");
         background-color: #608bc1;
       }
 
       &-image4 {
-        background-image: url("../../images/education-img-13.svg");
+        background-image: url("@/images/education-img-13.svg");
         background-color: #147e5c;
       }
 
       &-image5 {
-        background-image: url("../../images/education-img-14.svg");
-        background-color: #155e95;
+        background-image: url("@/images/education-img-14.svg");
+        background-color: var(--card800);
       }
     }
 
@@ -595,6 +609,7 @@
 
       &__grid {
         display: grid;
+        width: 100%;
         grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 16px;
         align-items: start;
@@ -605,6 +620,7 @@
       }
 
       &__item {
+        width: 100%;
         background: #f7f7f8;
         border-radius: 12px;
         overflow: hidden;
@@ -615,7 +631,7 @@
       }
 
       &__head {
-        width: 496px;
+        width: 100%;
         border-radius: 12px;
         border: 0;
         padding: 24px;
@@ -653,6 +669,7 @@
 
       &__head-left {
         display: flex;
+        width: 100%;
         align-items: center;
         gap: 16px;
         min-width: 0;
@@ -692,7 +709,7 @@
 
       &__head-icon {
         flex: 0 0 auto;
-        color: #ffffff;
+        color: var(--white);
         font-size: 30px;
         line-height: 1;
 
@@ -707,7 +724,7 @@
 
       &__arrow {
         flex: 0 0 auto;
-        color: #ffffff;
+        color: var(--white);
         font-size: 16px;
         line-height: 1;
         transition: transform 0.3s ease;
@@ -792,7 +809,7 @@
     &-wrapper {
       padding: 24px;
       border-radius: 12px;
-      background-color: #ffffff;
+      background-color: var(--white);
       margin-bottom: 60px;
 
       @include devices(md) {
@@ -912,162 +929,162 @@
     }
   }
 
-  /* Thorough responsive refinements for .education */
   @include devices(xl) {
     &-section {
       padding: 100px 0;
+    }
 
-      &-content {
-        width: 100%;
-        max-width: 1300px;
-        margin: 0 auto;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 24px;
-      }
+    &-content {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
 
-      &-wrapper {
-        max-width: 560px;
-        margin-left: auto;
-      }
+    &-wrapper {
+      max-width: 560px;
     }
   }
 
   @include devices(lg) {
     &-section {
-      padding: 90px 16px;
+      padding: 80px 16px;
+    }
 
-      &-main {
-        gap: 20px;
-      }
+    &-main {
+      gap: 20px;
+    }
 
-      &-content {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-      }
+    &-content {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
 
-      &-content &-card {
-        padding: 22px;
-        min-height: 190px;
-      }
-      &-wrapper {
-        max-width: 520px;
-      }
+    &-content &-card {
+      padding: 20px;
+      min-height: 180px;
+    }
+
+    &-wrapper {
+      max-width: 520px;
     }
   }
 
   @include devices(md) {
     &-section {
-      padding: 64px 16px;
+      padding: 56px 16px;
+    }
 
-      &-main {
-        flex-direction: column;
-        gap: 20px;
-      }
+    &-main {
+      flex-direction: column;
+      gap: 18px;
+    }
 
-      &-content {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 16px;
-        width: 100%;
-        max-width: 100%;
-      }
+    &-content {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      width: 100%;
+      max-width: 100%;
+    }
 
-      /* make sure any grid spans collapse on tablet */
-      &-content &-card {
-        grid-column: span 1 !important;
-      }
+    &-content &-card {
+      grid-column: span 1 !important;
+      min-height: 170px;
+      padding: 18px;
+    }
 
-      &-content &-card::after {
-        width: 84px;
-        height: 84px;
-        opacity: 0.06;
-      }
+    &-content &-card::after {
+      display: none;
+    }
 
-      &-wrapper {
-        width: 100%;
-        padding: 18px;
-      }
+    &-wrapper {
+      width: 100%;
+      padding: 16px;
+      order: 2;
+    }
+    &-content {
+      order: 1;
     }
   }
 
   @include devices(sm) {
     &-section {
-      padding: 40px 12px;
+      padding: 36px 12px;
+    }
 
-      &-text {
-        text-align: left;
-      }
+    &-text {
+      text-align: left;
+    }
 
-      &-main {
-        flex-direction: column;
-        gap: 14px;
-      }
+    &-main {
+      flex-direction: column;
+      gap: 12px;
+    }
 
-      &-content {
-        grid-template-columns: 1fr;
-        gap: 12px;
-        width: 100%;
-        max-width: 100%;
-        margin: 0;
-        padding: 0;
-      }
+    &-content {
+      grid-template-columns: 1fr;
+      gap: 12px;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      order: 1;
+    }
 
-      &-content &-card {
-        grid-column: span 1 !important;
-        min-height: 150px;
-        padding: 16px;
+    &-content &-card {
+      grid-column: span 1 !important;
+      min-height: 150px;
+      padding: 14px;
+      text-align: left;
+    }
 
-        i {
-          font-size: 40px;
-        }
-        h3 {
-          font-size: 20px;
-        }
-        p {
-          font-size: 14px;
-          max-width: 100%;
-        }
+    &-content &-card i {
+      font-size: 40px;
+    }
+    &-content &-card h3 {
+      font-size: 20px;
+    }
+    &-content &-card p {
+      font-size: 14px;
+      max-width: 100%;
+    }
 
-        &::after {
-          display: none;
-        }
-      }
+    &-content &-card::after {
+      display: none;
+    }
 
-      &-wrapper {
-        width: 100%;
-        padding: 14px;
-        border-radius: 10px;
-        max-width: none;
-        margin: 0;
+    &-wrapper {
+      width: 100%;
+      padding: 12px;
+      border-radius: 10px;
+      max-width: none;
+      margin: 0;
+      order: 2;
+    }
 
-        &-btn {
-          padding-top: 12px;
-        }
-        &-btn &-button {
-          width: 100%;
-          max-width: 100%;
-        }
-      }
+    &-wrapper &-btn &-button {
+      width: 100%;
+      max-width: 100%;
     }
   }
 
   @include devices(xs) {
     &-section {
-      padding: 28px 12px;
+      padding: 24px 10px;
+    }
 
-      &-content &-card {
-        padding: 14px;
-        min-height: 140px;
-      }
-      &-wrapper {
-        padding: 12px;
-      }
+    &-content &-card {
+      padding: 12px;
+      min-height: 140px;
+    }
+    &-wrapper {
+      padding: 10px;
+    }
 
-      /* enforce readable font sizes */
-      h3,
-      p {
-        font-size: 14px !important;
-        line-height: 20px !important;
-      }
+    h3,
+    p {
+      font-size: 14px !important;
+      line-height: 20px !important;
     }
   }
 }

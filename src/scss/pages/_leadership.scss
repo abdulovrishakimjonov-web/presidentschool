@@ -9,6 +9,7 @@
       padding: 24px 24px 45px 24px;
       background-color: var(--white);
       border-radius: 12px;
+	  height: 549px;
       h3 {
         @include font(24px, 500);
         color: #0f172a;
@@ -31,14 +32,24 @@
     &-cards {
       display: flex;
       flex-direction: column;
-      img {
-        height: 280px;
-      }
+	  height: 549px;
+	
+
+	  &-line {
+		width: 368px;
+		height: 10px;
+		background-color: #0D2460;
+		border-radius: 6px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	  }
+      
       &-card {
         padding: 22px 16px;
         background-color: var(--white);
         border-radius: 12px;
-        background-image: url("../../images/lidership-img-2.png");
+        background-image: url("@/images/lidership-img-2.png");
         background-repeat: no-repeat;
         background-position: right top 50%;
         p {
@@ -76,24 +87,39 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
 
+    @include devices(lg) {
+      grid-template-columns: 1fr;
+    }
+
     &-item {
       display: flex;
       align-items: center;
-      background: linear-gradient(270deg, #2A407A 0%, #1C2F61 89.69%);
+      background: linear-gradient(270deg, #2a407a 0%, #1c2f61 89.69%);
       border-radius: 12px;
+
+      @include devices(sm) {
+        flex-direction: column;
+
+        img {
+          width: 100%;
+          padding: 0px;
+        }
+      }
 
       &-horizantal {
         width: 10px;
         height: 100%;
-		opacity: 15%;
-        background-color: #E2E8F0;
+        opacity: 15%;
+        background-color: #e2e8f0;
       }
 
-	  &-media	 {
+      &-media {
         padding: 16px;
-        background-image: url("../../images/leadership-img.svg");
+        background-image: url("@/images/leadership-img.svg");
         background-repeat: no-repeat;
         background-position: right top 45%;
+        border-left: 10px solid #2a407a;
+        position: relative;
 
         b {
           @include font(#ffffff, 18px, 400);
@@ -113,8 +139,8 @@
         &-line {
           width: 100%;
           height: 0.5px;
-		  opacity: 15%;
-          background-color: #E2E8F0;
+          opacity: 15%;
+          background-color: #e2e8f0;
           margin-bottom: 10px;
         }
         h3 {
@@ -124,7 +150,7 @@
         }
         p {
           @include font(#ffffff, 16px, 400);
-		  opacity: 80%;
+          opacity: 80%;
           line-height: 24px;
           margin-bottom: 12px;
         }
@@ -135,7 +161,7 @@
           gap: 16px;
           button {
             padding: 6px;
-            border: 1px solid #E2E8F033;
+            border: 1px solid #e2e8f033;
             border-radius: 6px;
             background: #ffffff1a;
             display: flex;
@@ -166,6 +192,13 @@
       align-items: center;
       background: var(--white);
 
+      @include devices(sm) {
+        flex-direction: column;
+        img {
+          width: 100%;
+        }
+      }
+
       border-radius: 12px;
       &-horizantal {
         width: 10px;
@@ -175,7 +208,7 @@
 
       &-card {
         padding: 16px;
-        background-image: url("../../images/lidership-img-2.png");
+        background-image: url("@/images/lidership-img-2.png");
         background-repeat: no-repeat;
         background-position: right top 45%;
 

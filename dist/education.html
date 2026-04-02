@@ -25,44 +25,51 @@
 	<div class="header-top">
 		<div class="container">
 			<div class="header-top-right">
-				<a href="#"><i class="i-phone"></i>+998 (90) 123 45 67</a>
-				<a href="#"><i class="i-mail"></i>+998 (90) 123 45 67</a>
+				<a href="#">
+					<i class="i-phone"></i>
+					<span>+998 (90) 123 45 67</span>
+				</a>
+				<a href="#">
+					<i class="i-mail"></i>
+					<span>+998 (90) 123 45 67</span>
+				</a>
 			</div>
+
 			<div class="header-top-left">
 				<div class="header-top-left-line">
-					<a href=""><i class="i-instagram"></i></a>
+					<a href=""><i class="i-Instagram"></i></a>
 					<a href=""><i class="i-youtube"></i></a>
 					<a href=""><i class="i-facebook"></i></a>
-					<a href=""><i class="i-telegram"></i></a>
+					<a href=""><i class="i-Telegram"></i></a>
 				</div>
-				<!-- language dropdown -->
 				<div class="header-top-lang">
 					<button class="header-top-lang-toggle" type="button" aria-haspopup="listbox" aria-expanded="false">
-						<img src="../../images/flag-uz.png" alt="uz">
+						<img src="./images/flag-uz.png" alt="uz">
 						<span class="header-top-lang-label">uzb</span>
 						<i class="i-dropdawun"></i>
 					</button>
 					<ul class="header-top-lang-menu" role="listbox" hidden>
-						<li role="option" data-lang="uz" data-flag="../../images/flag-uz.png"> <img
-								src="../../images/flag-uz.png" alt="uz"> <span>uzb</span></li>
-						<li role="option" data-lang="ru" data-flag="../../images/flag-ru.png"> <img
-								src="../../images/flag-ru.png" alt="ru"> <span>ru</span></li>
-						<li role="option" data-lang="en" data-flag="../../images/flag-en.png"> <img
-								src="../../images/flag-en.png" alt="en"> <span>eng</span></li>
+						<li role="option" data-lang="uz" data-flag="./images/flag-uz.png"> <img
+								src="./images/flag-uz.png" alt="uz"> <span>uzb</span></li>
+						<li role="option" data-lang="ru" data-flag="./images/flag-ru.png"> <img
+								src="./images/flag-ru.png" alt="ru"> <span>ru</span></li>
+						<li role="option" data-lang="en" data-flag="./images/flag-en.png"> <img
+								src="./images/flag-en.png" alt="en"> <span>eng</span></li>
 					</ul>
 				</div>
-				<!-- end language dropdown -->
 			</div>
 
 		</div>
 	</div>
 	<a class="header-logo" href="/"><img src="./images/logo.svg" alt=""></a>
-	<button class="header__menu-btn " hidden type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu"
-		aria-controls="offcanvasMenu" aria-expanded="false">
-		<span class="header__burger" aria-hidden="true"></span>
-	</button>
 	<div class="header-text">
 		<div class="container">
+			<div class="header-text-btn">
+				<button class="" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu"
+					aria-controls="offcanvasMenu" aria-expanded="false">
+					<i class="i-menu"></i>
+				</button>
+			</div>
 			<div class="header-text-right">
 				<a href="./about.html">Biz haqimizda</a>
 				<a href="./leadership.html">Rahbariyat</a>
@@ -77,7 +84,49 @@
 			</div>
 		</div>
 	</div>
+
+	<div class="header-modal">
+		<div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+			tabindex="-1">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title fs-5" id="exampleModalToggleLabel">Modal 1</h1>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						Show a second modal and hide this one with the button below.
+					</div>
+					<div class="modal-footer">
+						<button class="btn btn-primary" data-bs-target="#exampleModalToggle2"
+							data-bs-toggle="modal">search</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
+			tabindex="-1">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Modal 2</h1>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						Hide this modal and show the first with the button below.
+					</div>
+					<div class="modal-footer">
+						<button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back
+							to first</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<button class="btn btn-#0D2460" data-bs-target="#exampleModalToggle" data-bs-toggle="modal"><i class="i-search"></i>
+		</button>
+	</div>
 </header>
+
 
 <script>
 	(function () {
@@ -136,7 +185,9 @@
 	<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasMenu"
 	aria-labelledby="offcanvasMenuLabel">
 	<div class="offcanvas-header">
-		<h5 class="offcanvas-title" id="offcanvasMenuLabel">Menyu</h5>
+		<a class="offcanvas-header-logo" href=""><img src="../../images/logo.svg" alt="">
+			<span>Presidential school in tashkent </span>
+		</a>
 		<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 	</div>
 	<div class="offcanvas-body">
@@ -144,10 +195,9 @@
 			<li class="menu-item menu-item--dropdown">
 				<span class="menu-link" data-bs-toggle="collapse" data-bs-target="#submenu1" aria-expanded="false"
 					aria-controls="submenu1">
-					Agentlik
-					<i class="i-angle-bot"></i>
+					Biz haqimizda
 				</span>
-				<ul class="submenu collapse" id="submenu1">
+				<!-- <ul class="submenu collapse" id="submenu1">
 					<li class="submenu-item">
 						<a href="about.html" class="submenu-link">
 							Biz haqimizda
@@ -206,44 +256,61 @@
 							</li>
 						</ul>
 					</li>
-				</ul>
+				</ul> -->
 			</li>
 			<li class="menu-item">
 				<a href="empty.html" class="menu-link">
-					Bo'sh sahifa
+					Rahbariyat
 				</a>
 			</li>
 			<li class="menu-item">
 				<a href="list.html" class="menu-link">
-					Ma'lumotlar bazasi
+					Ta’lim
 				</a>
 			</li>
 			<li class="menu-item">
 				<a href="table.html" class="menu-link">
-					Jadval
+					Qabul
 				</a>
 			</li>
 			<li class="menu-item">
 				<a href="stats.html" class="menu-link">
-					Expertlar statistikasi
+					Bizning faxrimiz
 				</a>
 			</li>
 			<li class="menu-item">
 				<a href="news.html" class="menu-link">
-					Yangiliklar
+					Galereya
 				</a>
 			</li>
 			<li class="menu-item">
 				<a href="faq.html" class="menu-link">
-					Faq
+					Yangliklar
 				</a>
 			</li>
 			<li class="menu-item">
 				<a href="contacts.html" class="menu-link">
-					Kontaktlar
+					Bog’lanish
 				</a>
 			</li>
 		</ul>
+		<div class="offcanvas-body-icon">
+			<a href="#"><i class="i-Instagram"></i></a>
+			<a href="#"><i class="i-youtube"></i></a>
+			<a href="#"><i class="i-facebook"></i></a>
+			<a href="#"><i class="i-Telegram"></i></a>
+		</div>
+
+		<div class="offcanvas-body-link">
+			<a href="">
+				<i class="i-phone"></i>
+				<span>+998 (90) 123 45 67</span>
+			</a>
+			<a href="">
+				<i class="i-mail"></i>
+				<span>info@tashkentpm.org</span>
+			</a>
+		</div>
 	</div>
 </div>
 	<div class="breadcrumbs">
@@ -255,7 +322,6 @@
                      <i class="i-home"></i> <i class="i-arrow-right"></i>  Biz haqimizda
                     </a>
                 </li>
-
             </ul>
             <h1 class="breadcrumbs__title">
                 Biz haqimizda
@@ -520,50 +586,49 @@
 		</div>
 	</div>
 	<footer class="footer">
-    <div class="footer__container container">
-        <div class="footer-main">
-            <div class="footer-main-right">
-                <div class="footer-main-right-text">
-                    <a href="../../about.html">Biz haqimizda</a>
-                    <a href="#">Rahbariyat</a>
-                    <a href="#">Ta’lim</a>
-                    <a href="#">Qabul</a>
-                </div>
-                <div class="footer-main-right-line"></div>
-                <div class="footer-main-right-link">
-                    <a href="#"><i class="i-phone"></i>+998 (90) 123 45 67</a>
-                    <a href="#"><i class="i-mail"></i>info@tashkentpm.org</a>
-                </div>
-            </div>
-            <a class="footer-logo" href=""><img src="./images/footer-logo.png" alt=""></a>
-            <div class="footer-main-left">
-                <div class="footer-main-left-text">
-                    <a href="#">Biz haqimizda</a>
-                    <a href="#">Rahbariyat</a>
-                    <a href="#">Ta’lim</a>
-                    <a href="#">Qabul</a>
-                </div>
-                <div class="footer-main-left-line"></div>
-                <diz`v class="footer-main-left-link">
-                    <a href="#"><i class="i-location"></i>Durmon Y'oli 32, Тоshkent, Toshkent, Узбекистан</a>
-                    <div class="footer-main-left-link-icon">
-                        <i class="i-instagram"></i>
-                        <i class="i-youtube"></i>
-                        <i class="i-facebook"></i>
-                        <i class="i-telegram"></i>
-                    </div>
-                    </diz>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="footer-bottom-line"></div>
-            <div class="footer-bottom-link">
-                <p>© 2026 Presidential School in Tashkent</p>
-                <p>Developed by: <img src="../../images/proend.svg" alt=""></p>
-            </div>
-        </div>
-
-    </div>
+	<div class="footer__container container">
+		<div class="footer-main">
+			<div class="footer-main-right">
+				<div class="footer-main-right-text">
+					<a href="./about.html">Biz haqimizda</a>
+					<a href="./leadership.html">Rahbariyat</a>
+					<a href="./education.html">Ta’lim</a>
+					<a href="./application.html">Qabul</a>
+				</div>
+				<div class="footer-main-right-line"></div>
+				<div class="footer-main-right-link">
+					<a href="#"><i class="i-phone"></i><span>+998 (90) 123 45 67</span></a>
+					<a href="#"><i class="i-mail"></i><span>info@tashkentpm.org</span></a>
+				</div>
+			</div>
+			<a class="footer-logo" href=""><img src="./images/logo.svg" alt=""></a>
+			<div class="footer-main-left">
+				<div class="footer-main-left-text">
+					<a href="#">Biz haqimizda</a>
+					<a href="#">Rahbariyat</a>
+					<a href="#">Ta’lim</a>
+					<a href="#">Qabul</a>
+				</div>
+				<div class="footer-main-left-line"></div>
+				<diz`v class="footer-main-left-link">
+					<a href="#"><i class="i-location"></i>Durmon Y'oli 32, Тоshkent, Toshkent, Узбекистан</a>
+					<div class="footer-main-left-link-icon">
+						<i class="i-Instagram"></i>
+						<i class="i-youtube"></i>
+						<i class="i-facebook"></i>
+						<i class="i-Telegram"></i>
+					</div>
+					</diz>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<div class="footer-bottom-line"></div>
+			<div class="footer-bottom-link">
+				<p>© 2026 Presidential School in Tashkent</p>
+				<p>Developed by: <a href="https://proend.uz/"><img src="./images/proend.svg" alt=""></a></p>
+			</div>
+		</div>
+	</div>
 </footer>
 <script src="./assets/libs/jquery.min.js"></script>
 <script src="./assets/libs/bootstrap/bootstrap.bundle.min.js"></script>
@@ -571,20 +636,57 @@
 <script src="./assets/js/main.js"></script>
 
 <script>
-  $(document).ready(function () {
-    $(".gallery-section-carousel").owlCarousel({
-      loop: true,
-      margin: 16,
-      autoWidth: true,
-      nav: false,
-      dots: false,
-      autoplay: true,
-      autoplayTimeout: 3500,
-      autoplayHoverPause: true,
-      smartSpeed: 700
-    });
-  });
+	$(document).ready(function () {
+		$(".gallery-section-carousel").owlCarousel({
+			loop: true,
+			margin: 16,
+			autoWidth: true,
+			nav: false,
+			dots: false,
+			autoplay: true,
+			autoplayTimeout: 3500,
+			autoplayHoverPause: true,
+			smartSpeed: 700
+		});
+	});
 </script>
+
+
+
+<!-- <script>
+	var owl = $('.hero__stats'); 
+
+	owl.owlCarousel({
+		items: 3,
+		loop: true,
+		margin: 16,
+		autoplay: true,
+		autoplayTimeout: 2000,
+		autoplayHoverPause: true,
+		responsive: {
+			0: {
+				items: 1,
+				margin: 12
+			},
+			600: {
+				items: 2,
+				margin: 16
+			},
+			1000: {
+				items: 3,
+				margin: 20
+			}
+		}
+	});
+
+	$('.play').on('click', function () {
+		owl.trigger('play.owl.autoplay', [1000])
+	})
+
+	$('.stop').on('click', function () {
+		owl.trigger('stop.owl.autoplay')
+	})
+</script> -->
 
 </body>
 

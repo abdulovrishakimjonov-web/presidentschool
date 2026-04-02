@@ -2,6 +2,10 @@
   &-section {
     background-color: #ffffff;
     padding: 50px 0px;
+
+    @include devices(sm) {
+      padding: 25px 0px;
+    }
     &-link {
       display: flex;
       justify-content: space-between;
@@ -45,8 +49,11 @@
     &-main {
       display: flex;
       align-items: center;
-      gap: 32px;
       justify-content: space-between;
+
+      &carusel {
+        max-width: 100%;
+      }
       &-wrapper {
         display: flex;
         flex-direction: column;
@@ -55,11 +62,20 @@
           width: 845px;
           display: flex;
           align-items: center;
+
+          @include devices(lg) {
+            width: 100%;
+            max-width: 100%;
+          }
           &-start {
             width: 505px;
             padding: 16px;
             border-radius: 12px;
             border: 1px solid var(--neutral100);
+
+            @include devices(lg) {
+              width: 100%;
+            }
             h4 {
               @include font(var(--neutral900), 24px, 500);
               line-height: 32px;
@@ -78,17 +94,21 @@
               margin-bottom: 16px;
             }
             &-link {
+              width: 100%;
               display: flex;
               align-items: center;
               justify-content: space-between;
+              gap: 20px;
+
               a {
                 @include font(var(#334155) 18px, 400);
-                line-height: 28px;
                 color: #1e4f91;
                 display: flex;
                 align-items: center;
                 gap: 8px;
+                white-space: nowrap;
               }
+
               &-text {
                 display: flex;
                 align-items: center;
@@ -100,7 +120,7 @@
       }
 
       &-wrapper {
-        --card-w: 640px;
+        --card-w: 100%;
         --card-h: 467px;
         --gap: 16px;
         --transition: 0.55s cubic-bezier(0.4, 0, 0.2, 1);
@@ -112,12 +132,14 @@
         gap: 9px;
         align-items: center;
         justify-content: center;
+        margin-right: 50px;
 
         &__track {
           position: relative;
           width: var(--card-w);
           height: var(--card-h);
           transform-style: preserve-3d;
+          max-width: 100%;
         }
 
         &__card {
@@ -382,7 +404,7 @@
 
     &-main {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-columns: repeat(4, 1fr);
       gap: 16px;
 
       @include devices(xl) {
@@ -443,10 +465,13 @@
           }
 
           p {
-            @include font(24px, 500);
+            @include font(var(--neutral800), 24px, 500);
             line-height: 32px;
-            color: var(--neutral800);
             margin-bottom: 16px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
 
             @include devices(lg) {
               font-size: 20px;
@@ -472,9 +497,9 @@
           }
 
           &-link {
-            display: grid;
-            grid-template-columns: 1fr auto;
+            display: flex;
             align-items: center;
+            justify-content: space-between;
             gap: 10px;
 
             @include devices(xs) {
@@ -482,8 +507,7 @@
             }
 
             a {
-              @include font(18px, 400);
-              color: var(--neutral600);
+              @include font(var(--neutral600), 18px, 400);
               line-height: 28px;
               display: flex;
               align-items: center;
@@ -501,6 +525,7 @@
               }
 
               i {
+                color: #2a407a;
                 font-size: 20px;
                 flex: 0 0 auto;
 
@@ -740,19 +765,9 @@
     }
 
     .news-section-main-wrapper-card {
-      width: 845px;
-      max-width: 100%;
+      width: 100%;
       display: flex;
-      gap: 16px;
       align-items: flex-start;
-
-      img {
-        width: 340px;
-        flex: 0 0 340px;
-        height: 220px;
-        object-fit: cover;
-        border-radius: 12px;
-      }
 
       .news-section-main-wrapper-card-start {
         flex: 1 1 auto;

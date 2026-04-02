@@ -1,10 +1,10 @@
 .footer {
   position: relative;
-  background-color: #0d2460;
+  background-color: var(--card500);
   padding: 50px 0 22px;
 
   &::before {
-    background-image: url("../../images/footer-img-1.png");
+    background-image: url("@/images/footer-img-1.png");
     content: "";
     position: absolute;
     inset: 0;
@@ -48,7 +48,14 @@
         @include font(var(--white), 18px, 400);
         line-height: 28px;
         margin-bottom: 24px;
-        color: #fff;
+        color:var(--white);
+
+		@include devices(xxl) {
+			font-size: 16px;
+		}
+		@include devices(xl) {
+			font-size: 14px;
+		}
       }
     }
 
@@ -94,7 +101,7 @@
 
         i {
           font-size: 24px;
-          color: #fff;
+          color:var(--white);
           padding: 4px;
           border-radius: 6px;
           background-color: #ffffff1a;
@@ -127,15 +134,24 @@
     }
   }
 
-  @include devices(lg) {
+  @include devices(xl) {
     &-main {
       flex-direction: column;
       gap: 32px;
+	  display: flex;
+	  justify-content: center;
+    &-left,
+	  &-right {
+		&-link {
+			justify-content: center;
+		}
+	  }
 
       &-right-text,
       &-left-text {
         gap: 40px;
         flex-wrap: wrap;
+		justify-content: center;
       }
     }
   }
@@ -161,15 +177,25 @@
 
   @include devices(sm) {
     &-main {
-      &-right,
-      &-left {
-        display: none !important;
-      }
+     &-right {
+		&-text {
+			display: none;
+		}
+		&-link {
+			display: none;
+		}
+	 }
 
       &-logo {
         display: block;
         margin: 0 auto 12px;
       }
+
+	  &-left {
+		&-text {
+			display: none;
+		}
+	  }
     }
 
     &-bottom {
